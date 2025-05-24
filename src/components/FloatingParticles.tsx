@@ -1,6 +1,5 @@
 
 import { Canvas } from '@react-three/fiber';
-import { Sphere } from '@react-three/drei';
 import { useRef } from 'react';
 import { useFrame } from '@react-three/fiber';
 import * as THREE from 'three';
@@ -17,9 +16,10 @@ const Particle = ({ position }: { position: [number, number, number] }) => {
   });
 
   return (
-    <Sphere ref={meshRef} position={position} args={[0.05, 8, 8]}>
-      <meshBasicMaterial color="#00d4ff" transparent opacity={0.6} />
-    </Sphere>
+    <mesh ref={meshRef} position={position}>
+      <sphereGeometry args={[0.05, 8, 8]} />
+      <meshBasicMaterial color="#00d4ff" transparent={true} opacity={0.6} />
+    </mesh>
   );
 };
 
