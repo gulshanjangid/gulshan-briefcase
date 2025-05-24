@@ -1,4 +1,3 @@
-
 import { motion } from 'framer-motion';
 import { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
@@ -41,8 +40,12 @@ const Hero = () => {
         >
           <div className="w-32 h-32 mx-auto mb-8 relative">
             <div className="w-full h-full rounded-full bg-gradient-primary animate-glow-pulse"></div>
-            <div className="absolute inset-2 rounded-full bg-background flex items-center justify-center">
-              <span className="text-4xl font-bold text-gradient">AC</span>
+            <div className="absolute inset-1 rounded-full overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?w=200&h=200&fit=crop&crop=face"
+                alt="Alex Carter - Full Stack Developer"
+                className="w-full h-full object-cover rounded-full"
+              />
             </div>
           </div>
         </motion.div>
