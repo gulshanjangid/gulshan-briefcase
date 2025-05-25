@@ -7,25 +7,36 @@ const Education = () => {
   const education = [
     {
       id: 1,
-      degree: 'Bachelor of Science in Computer Science',
-      institution: 'University of Technology',
-      location: 'San Francisco, CA',
-      duration: '2020 - 2024',
-      gpa: '3.8/4.0',
-      description: 'Specialized in software engineering with focus on web development and database systems. Active member of the Computer Science Society.',
-      coursework: ['Data Structures & Algorithms', 'Software Engineering', 'Database Systems', 'Web Development', 'Computer Networks', 'Machine Learning'],
-      achievements: ['Dean\'s List (6 semesters)', 'Outstanding Student Award 2023', 'President, CS Society 2023-2024']
+      degree: 'B Tech (CSE)',
+      institution: 'Amity University, Rajasthan',
+      location: 'Rajasthan, India',
+      duration: '2022 - 2026',
+      gpa: '7.56 CGPA',
+      description: 'Pursuing Bachelor of Technology in Computer Science and Engineering with focus on software development, algorithms, and modern programming paradigms.',
+      coursework: ['Data Structures & Algorithms', 'Software Engineering', 'Database Management Systems', 'Web Development', 'Computer Networks', 'Object Oriented Programming'],
+      achievements: ['Active participation in coding competitions', 'Tech society member', 'Project development and innovation']
     },
     {
       id: 2,
-      degree: 'High School Diploma',
-      institution: 'Lincoln High School',
-      location: 'Oakland, CA',
-      duration: '2016 - 2020',
-      gpa: '3.9/4.0',
-      description: 'Graduated Summa Cum Laude with concentration in STEM subjects. Captain of the Programming Club and Math Olympiad team.',
-      coursework: ['AP Computer Science', 'AP Calculus BC', 'AP Physics', 'AP Chemistry', 'Advanced Mathematics'],
-      achievements: ['Valedictorian', 'National Merit Scholar', 'Programming Competition Winner 2019', 'Math Olympiad State Champion']
+      degree: '12th Standard',
+      institution: 'Krishna Vidya Mandir, Alwar',
+      location: 'Alwar, Rajasthan',
+      duration: '2020 - 2022',
+      gpa: '88.87%',
+      description: 'Completed senior secondary education with excellent performance in Science stream, building a strong foundation for engineering studies.',
+      coursework: ['Physics', 'Chemistry', 'Mathematics', 'Computer Science', 'English'],
+      achievements: ['Outstanding academic performance', 'Science stream topper', 'Active in extracurricular activities']
+    },
+    {
+      id: 3,
+      degree: '10th Standard',
+      institution: 'Krishna Vidya Mandir, Alwar',
+      location: 'Alwar, Rajasthan',
+      duration: '2018 - 2020',
+      gpa: '67.87%',
+      description: 'Completed secondary education with good academic performance, developing foundational knowledge across various subjects.',
+      coursework: ['Mathematics', 'Science', 'Social Studies', 'English', 'Hindi'],
+      achievements: ['Consistent academic progress', 'Participation in school competitions', 'Well-rounded development']
     }
   ];
 
@@ -76,7 +87,7 @@ const Education = () => {
                       </div>
                       {edu.gpa && (
                         <span className="px-3 py-1 text-xs font-medium bg-green-500/10 text-green-400 rounded-full border border-green-500/20">
-                          GPA: {edu.gpa}
+                          {edu.gpa}
                         </span>
                       )}
                     </div>

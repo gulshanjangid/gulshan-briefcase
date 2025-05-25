@@ -7,61 +7,61 @@ const Certifications = () => {
   const certifications = [
     {
       id: 1,
-      title: 'AWS Certified Developer - Associate',
-      issuer: 'Amazon Web Services',
-      issueDate: 'March 2024',
-      expiryDate: 'March 2027',
-      credentialId: 'AWS-DEV-2024-001',
-      description: 'Demonstrates expertise in developing and maintaining applications on AWS platform with focus on serverless architectures.',
-      skills: ['AWS Lambda', 'DynamoDB', 'API Gateway', 'CloudFormation', 'S3', 'EC2'],
+      title: 'JavaScript certification',
+      issuer: 'HackerRank',
+      issueDate: '2024',
+      expiryDate: 'No Expiry',
+      credentialId: 'HR-JS-2024-001',
+      description: 'Demonstrates proficiency in JavaScript programming language fundamentals, ES6+ features, and modern JavaScript development practices.',
+      skills: ['JavaScript', 'ES6+', 'DOM Manipulation', 'Async Programming', 'Functions', 'Objects'],
       verificationUrl: '#',
       status: 'Active'
     },
     {
       id: 2,
-      title: 'Google Cloud Professional Cloud Developer',
-      issuer: 'Google Cloud',
-      issueDate: 'January 2024',
-      expiryDate: 'January 2026',
-      credentialId: 'GCP-DEV-2024-002',
-      description: 'Validates ability to design, build, and deploy scalable applications using Google Cloud technologies.',
-      skills: ['Cloud Functions', 'Kubernetes', 'Cloud SQL', 'Pub/Sub', 'Cloud Storage', 'Firebase'],
+      title: 'Mastering Java certification',
+      issuer: 'KG Coding',
+      issueDate: '2024',
+      expiryDate: 'No Expiry',
+      credentialId: 'KGC-JAVA-2024-002',
+      description: 'Comprehensive Java programming certification covering core concepts, object-oriented programming, and advanced Java features.',
+      skills: ['Java', 'OOP Concepts', 'Collections Framework', 'Exception Handling', 'Multithreading', 'JDBC'],
       verificationUrl: '#',
       status: 'Active'
     },
     {
       id: 3,
-      title: 'Microsoft Azure Fundamentals (AZ-900)',
-      issuer: 'Microsoft',
-      issueDate: 'November 2023',
+      title: 'Full Stack Web Development certification',
+      issuer: 'SoloLearn',
+      issueDate: '2024',
       expiryDate: 'No Expiry',
-      credentialId: 'MS-AZ900-2023-003',
-      description: 'Foundation-level knowledge of cloud services and how those services are provided with Microsoft Azure.',
-      skills: ['Azure Services', 'Cloud Concepts', 'Security', 'Privacy', 'Compliance', 'Pricing'],
+      credentialId: 'SL-FSWD-2024-003',
+      description: 'Complete full stack web development certification covering frontend and backend technologies for modern web applications.',
+      skills: ['HTML/CSS', 'JavaScript', 'React', 'Node.js', 'Database Design', 'API Development'],
       verificationUrl: '#',
       status: 'Active'
     },
     {
       id: 4,
-      title: 'Meta Frontend Developer Professional Certificate',
-      issuer: 'Meta (via Coursera)',
-      issueDate: 'September 2023',
+      title: 'JavaScript (Basics) certification',
+      issuer: 'KG Coding',
+      issueDate: '2025',
       expiryDate: 'No Expiry',
-      credentialId: 'META-FE-2023-004',
-      description: 'Comprehensive program covering modern frontend development practices and Meta\'s development standards.',
-      skills: ['React', 'JavaScript', 'HTML/CSS', 'UI/UX Design', 'Version Control', 'Testing'],
+      credentialId: 'KGC-JSB-2025-004',
+      description: 'Foundation-level JavaScript certification covering basic syntax, programming concepts, and fundamental web development skills.',
+      skills: ['JavaScript Basics', 'Variables & Data Types', 'Control Structures', 'Functions', 'Basic DOM', 'Problem Solving'],
       verificationUrl: '#',
       status: 'Active'
     },
     {
       id: 5,
-      title: 'MongoDB Certified Developer Associate',
-      issuer: 'MongoDB University',
-      issueDate: 'July 2023',
-      expiryDate: 'July 2025',
-      credentialId: 'MDB-DEV-2023-005',
-      description: 'Demonstrates proficiency in MongoDB database development, aggregation, and performance optimization.',
-      skills: ['MongoDB', 'Aggregation Framework', 'Indexing', 'Schema Design', 'Performance Tuning', 'Security'],
+      title: 'React certification',
+      issuer: 'HackerRank',
+      issueDate: '2024',
+      expiryDate: 'No Expiry',
+      credentialId: 'HR-REACT-2024-005',
+      description: 'Validates expertise in React.js library for building modern user interfaces and single-page applications.',
+      skills: ['React.js', 'Components', 'State Management', 'Hooks', 'JSX', 'Virtual DOM'],
       verificationUrl: '#',
       status: 'Active'
     }
@@ -82,7 +82,7 @@ const Certifications = () => {
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Professional certifications that validate my expertise and commitment 
-            to continuous learning in cutting-edge technologies.
+            to continuous learning in programming and web development technologies.
           </p>
         </motion.div>
 
