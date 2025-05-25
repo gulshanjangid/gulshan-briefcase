@@ -1,7 +1,6 @@
 
 import { motion } from 'framer-motion';
 import { useState } from 'react';
-import { Github, ExternalLink } from 'lucide-react';
 
 const Projects = () => {
   const [hoveredProject, setHoveredProject] = useState<number | null>(null);
@@ -14,7 +13,6 @@ const Projects = () => {
       tech: ['MongoDB', 'Express.js', 'React.js', 'Node.js', 'AI/ML', 'PDF Export'],
       duration: 'Jan 2025 - Feb 2025',
       image: '/placeholder.svg',
-      github: 'https://github.com/gulshanjangid/smartcv-ai',
       link: '#',
       gradient: 'from-blue-500 to-purple-600'
     },
@@ -25,7 +23,6 @@ const Projects = () => {
       tech: ['AI/ML', 'Location Services', 'WhatsApp API', 'Node.js', 'Real-time Chat'],
       duration: 'Sep 2024 - Dec 2024',
       image: '/placeholder.svg',
-      github: 'https://github.com/gulshanjangid/ai-chatbot-support',
       link: '#',
       gradient: 'from-green-500 to-blue-500'
     },
@@ -36,7 +33,6 @@ const Projects = () => {
       tech: ['Web Development', 'Educational Platform', 'Content Management', 'Responsive Design'],
       duration: 'July 2023 - Sep 2023',
       image: '/placeholder.svg',
-      github: 'https://github.com/gulshanjangid/flyengcareer',
       link: '#',
       gradient: 'from-purple-500 to-pink-500'
     }
@@ -115,28 +111,13 @@ const Projects = () => {
                   ))}
                 </div>
 
-                <div className="flex gap-2 pt-2">
-                  <motion.a
-                    href={project.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                    className="flex-1 px-4 py-2 bg-gray-800 hover:bg-gray-700 text-white font-semibold rounded-lg transition-all duration-300 flex items-center justify-center gap-2"
-                  >
-                    <Github className="w-4 h-4" />
-                    GitHub
-                  </motion.a>
-                  
-                  <motion.button
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                    className="flex-1 px-4 py-2 bg-gradient-primary text-background font-semibold rounded-lg hover:shadow-lg transition-all duration-300 flex items-center justify-center gap-2"
-                  >
-                    <ExternalLink className="w-4 h-4" />
-                    Live Demo
-                  </motion.button>
-                </div>
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="w-full mt-4 px-4 py-2 bg-gradient-primary text-background font-semibold rounded-lg hover:shadow-lg transition-all duration-300"
+                >
+                  View Project
+                </motion.button>
               </div>
             </motion.div>
           ))}

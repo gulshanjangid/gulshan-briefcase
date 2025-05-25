@@ -23,7 +23,7 @@ const Hero = () => {
     }
   }, []);
 
-  const name = "GULSHAN JANGID";
+  const name = "ALEX CARTER";
   const title = "Full Stack Developer";
 
   return (
@@ -38,7 +38,7 @@ const Hero = () => {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="mb-8"
         >
-          <div className="w-56 h-56 mx-auto mb-8 relative">
+          <div className="w-40 h-40 mx-auto mb-8 relative">
             <motion.div 
               className="w-full h-full rounded-full bg-gradient-primary animate-glow-pulse"
               whileHover={{ scale: 1.1 }}
@@ -50,8 +50,8 @@ const Hero = () => {
               transition={{ duration: 0.3, ease: "easeOut" }}
             >
               <img
-                src="/lovable-uploads/73b64c1c-1faa-48cd-b0e4-e3a8b36c8bc3.png"
-                alt="Gulshan Jangid - Full Stack Developer"
+                src="https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?w=200&h=200&fit=crop&crop=face"
+                alt="Alex Carter - Full Stack Developer"
                 className="w-full h-full object-cover rounded-full"
               />
             </motion.div>
