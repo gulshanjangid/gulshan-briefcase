@@ -1,4 +1,3 @@
-
 import { motion } from 'framer-motion';
 import { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
@@ -34,24 +33,12 @@ const Hero = () => {
     >
       <div className="text-center z-10 px-4">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="mb-6"
-        >
-          <h3 className="text-xl md:text-2xl font-medium text-primary mb-2">Profile</h3>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
-            Passionate Full Stack Developer with expertise in modern web technologies
-          </p>
-        </motion.div>
-
-        <motion.div
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="mb-8"
         >
-          <div className="w-48 h-48 mx-auto mb-8 relative">
+          <div className="w-56 h-56 mx-auto mb-8 relative">
             <motion.div 
               className="w-full h-full rounded-full bg-gradient-primary animate-glow-pulse"
               whileHover={{ scale: 1.1 }}
@@ -63,7 +50,7 @@ const Hero = () => {
               transition={{ duration: 0.3, ease: "easeOut" }}
             >
               <img
-                src="/lovable-uploads/cae7fcad-49e2-4f2e-9355-6536ec40ee34.png"
+                src="/lovable-uploads/73b64c1c-1faa-48cd-b0e4-e3a8b36c8bc3.png"
                 alt="Gulshan Jangid - Full Stack Developer"
                 className="w-full h-full object-cover rounded-full"
               />
