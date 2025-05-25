@@ -40,13 +40,13 @@ const Navigation = () => {
             AC
           </motion.div>
 
-          <div className="hidden md:flex items-center space-x-8">
-            {['About', 'Projects', 'Contact'].map((item) => (
+          <div className="hidden md:flex items-center space-x-6">
+            {['About', 'Experience', 'Education', 'Certifications', 'Projects', 'Contact'].map((item) => (
               <motion.button
                 key={item}
                 whileHover={{ y: -2 }}
                 onClick={() => scrollToSection(item.toLowerCase())}
-                className="text-foreground hover:text-primary transition-colors duration-300 font-medium"
+                className="text-foreground hover:text-primary transition-colors duration-300 font-medium text-sm"
               >
                 {item}
               </motion.button>

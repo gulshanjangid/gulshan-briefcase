@@ -3,6 +3,9 @@ import FloatingParticles from '@/components/FloatingParticles';
 import Navigation from '@/components/Navigation';
 import Hero from '@/components/Hero';
 import About from '@/components/About';
+import Experience from '@/components/Experience';
+import Education from '@/components/Education';
+import Certifications from '@/components/Certifications';
 import Projects from '@/components/Projects';
 import Contact from '@/components/Contact';
 
@@ -19,6 +22,18 @@ const Index = () => {
         
         <section id="about">
           <About />
+        </section>
+        
+        <section id="experience">
+          <Experience />
+        </section>
+        
+        <section id="education">
+          <Education />
+        </section>
+        
+        <section id="certifications">
+          <Certifications />
         </section>
         
         <section id="projects">
