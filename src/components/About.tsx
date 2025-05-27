@@ -15,7 +15,9 @@ const About = () => {
     { name: 'TypeScript', level: 90, color: 'from-blue-600 to-blue-400' },
     { name: 'Node.js', level: 85, color: 'from-green-500 to-emerald-400' },
     { name: 'Python', level: 80, color: 'from-yellow-500 to-orange-400' },
-    { name: 'AWS / Cloud', level: 75, color: 'from-orange-500 to-red-400' },
+    { name: 'Git/Github', level: 85, color: 'from-gray-500 to-gray-400' },
+    { name: 'Wordpress Developer', level: 75, color: 'from-blue-500 to-blue-600' },
+    { name: 'Graphic Designing', level: 70, color: 'from-purple-500 to-pink-400' },
     { name: 'UI/UX Design', level: 70, color: 'from-purple-500 to-pink-400' },
   ];
 
