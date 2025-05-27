@@ -1,3 +1,4 @@
+
 import { motion } from 'framer-motion';
 import { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
@@ -38,7 +39,7 @@ const Hero = () => {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="mb-8"
         >
-          <div className="w-40 h-40 mx-auto mb-8 relative">
+          <div className="w-48 h-48 mx-auto mb-8 relative">
             <motion.div 
               className="w-full h-full rounded-full bg-gradient-primary animate-glow-pulse"
               whileHover={{ scale: 1.1 }}
@@ -50,7 +51,7 @@ const Hero = () => {
               transition={{ duration: 0.3, ease: "easeOut" }}
             >
               <img
-                src="https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?w=200&h=200&fit=crop&crop=face"
+                src="/lovable-uploads/7836a78f-978c-4929-bba1-84ae138d3958.png"
                 alt="Alex Carter - Full Stack Developer"
                 className="w-full h-full object-cover rounded-full"
               />
