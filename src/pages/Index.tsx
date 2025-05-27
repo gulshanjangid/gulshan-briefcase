@@ -1,5 +1,7 @@
 
 import FloatingParticles from '@/components/FloatingParticles';
+import FloatingElements from '@/components/animations/FloatingElements';
+import MorphingShape from '@/components/animations/MorphingShape';
 import Navigation from '@/components/Navigation';
 import Hero from '@/components/Hero';
 import About from '@/components/About';
@@ -13,6 +15,8 @@ const Index = () => {
   return (
     <div className="relative min-h-screen">
       <FloatingParticles />
+      <FloatingElements />
+      <MorphingShape />
       <Navigation />
       
       <main className="relative z-10">
