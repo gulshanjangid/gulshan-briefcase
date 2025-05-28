@@ -30,7 +30,7 @@ const Computer = ({ isHovered }: { isHovered: boolean }) => {
       {/* Screen Display */}
       <mesh position={[0, 0.5, 0.06]}>
         <planeGeometry args={[1.8, 1]} />
-        <meshBasicMaterial color="#00d4ff" emissive="#00d4ff" emissiveIntensity={0.3} />
+        <meshStandardMaterial color="#00d4ff" emissive="#00d4ff" emissiveIntensity={0.3} />
       </mesh>
       
       {/* Computer Base */}
