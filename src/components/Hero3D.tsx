@@ -2,51 +2,78 @@
 import { Canvas } from '@react-three/fiber';
 import { Suspense, useRef } from 'react';
 import { motion } from 'framer-motion';
-import { OrbitControls, PerspectiveCamera, Environment } from '@react-three/drei';
+import { OrbitControls, PerspectiveCamera, Environment, EffectComposer, Bloom } from '@react-three/drei';
 import Computer3D from './animations/Computer3D';
 
 const Hero3DScene = () => {
   return (
     <>
-      <PerspectiveCamera makeDefault position={[0, 2, 6]} fov={50} />
+      <PerspectiveCamera makeDefault position={[0, 2, 6]} fov={45} />
       <OrbitControls 
         enableZoom={false} 
         enablePan={false}
         maxPolarAngle={Math.PI / 2}
-        minPolarAngle={Math.PI / 4}
+        minPolarAngle={Math.PI / 4.5}
         autoRotate
-        autoRotateSpeed={0.5}
+        autoRotateSpeed={0.3}
+        dampingFactor={0.05}
+        enableDamping
       />
       
-      {/* Lighting Setup */}
-      <ambientLight intensity={0.3} />
+      {/* Enhanced Lighting Setup */}
+      <ambientLight intensity={0.2} />
+      
+      {/* Main directional light */}
       <directionalLight 
         position={[10, 10, 5]} 
-        intensity={1}
+        intensity={0.8}
         castShadow
         shadow-mapSize-width={2048}
         shadow-mapSize-height={2048}
+        shadow-camera-far={50}
+        shadow-camera-left={-10}
+        shadow-camera-right={10}
+        shadow-camera-top={10}
+        shadow-camera-bottom={-10}
       />
-      <pointLight position={[-10, -10, -10]} intensity={0.5} color="#8b5cf6" />
-      <pointLight position={[10, 10, 10]} intensity={0.5} color="#00d4ff" />
+      
+      {/* Gaming setup accent lights */}
+      <pointLight position={[-5, 3, -2]} intensity={0.6} color="#8b5cf6" />
+      <pointLight position={[5, 3, -2]} intensity={0.6} color="#00d4ff" />
+      <pointLight position={[0, 5, 2]} intensity={0.4} color="#00ff88" />
+      
+      {/* Rim lighting */}
+      <pointLight position={[-8, 2, 8]} intensity={0.3} color="#ff0080" />
+      <pointLight position={[8, 2, 8]} intensity={0.3} color="#0080ff" />
       
       {/* Environment for reflections */}
       <Environment preset="city" />
       
-      {/* 3D Computer Model */}
+      {/* Fog for depth */}
+      <fog attach="fog" args={["#0a0a0a", 5, 15]} />
+      
+      {/* 3D Computer Gaming Setup */}
       <Computer3D />
       
-      {/* Ground plane with subtle glow */}
-      <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, -1.5, 0]} receiveShadow>
-        <planeGeometry args={[20, 20]} />
+      {/* Enhanced Ground plane with grid pattern */}
+      <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, -1.7, 0]} receiveShadow>
+        <planeGeometry args={[25, 25]} />
         <meshStandardMaterial 
-          color="#0a0a0a" 
-          roughness={0.8} 
-          metalness={0.2}
+          color="#050505" 
+          roughness={0.9} 
+          metalness={0.1}
           transparent
           opacity={0.8}
         />
       </mesh>
+      
+      {/* Grid lines for cyberpunk effect */}
+      <gridHelper 
+        args={[20, 20, "#00d4ff", "#8b5cf6"]} 
+        position={[0, -1.65, 0]} 
+        material-transparent={true}
+        material-opacity={0.3}
+      />
     </>
   );
 };
@@ -59,12 +86,37 @@ const Hero3D = () => {
       ref={heroRef}
       className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-b from-background via-background to-muted/20"
     >
+      {/* Animated Background Elements */}
+      <div className="absolute inset-0 overflow-hidden">
+        {Array.from({ length: 20 }).map((_, i) => (
+          <motion.div
+            key={i}
+            className="absolute w-1 h-1 bg-primary/30 rounded-full"
+            style={{
+              left: `${Math.random() * 100}%`,
+              top: `${Math.random() * 100}%`,
+            }}
+            animate={{
+              scale: [0, 1, 0],
+              opacity: [0, 1, 0],
+              y: [0, -50, -100],
+            }}
+            transition={{
+              duration: 3 + Math.random() * 2,
+              repeat: Infinity,
+              delay: Math.random() * 3,
+            }}
+          />
+        ))}
+      </div>
+
       {/* 3D Canvas */}
       <div className="absolute inset-0 w-full h-full">
         <Canvas
-          shadows
-          camera={{ position: [0, 2, 6], fov: 50 }}
+          shadows="soft"
+          camera={{ position: [0, 2, 6], fov: 45 }}
           className="w-full h-full"
+          gl={{ antialias: true, alpha: true }}
         >
           <Suspense fallback={null}>
             <Hero3DScene />
@@ -95,7 +147,7 @@ const Hero3D = () => {
             transition={{ duration: 0.8, delay: 1.2 }}
             className="text-2xl md:text-4xl font-light mb-8 text-muted-foreground"
           >
-            Creative Full Stack Developer
+            Gaming-Inspired Full Stack Developer
           </motion.h2>
 
           <motion.p
@@ -121,9 +173,9 @@ const Hero3D = () => {
                 y: -5
               }}
               whileTap={{ scale: 0.95 }}
-              className="px-8 py-4 bg-gradient-primary text-background font-semibold rounded-xl transition-all duration-300 shadow-lg"
+              className="px-8 py-4 bg-gradient-primary text-background font-semibold rounded-xl transition-all duration-300 shadow-lg animate-glow-pulse"
             >
-              Explore My Work
+              Enter the Code Matrix
             </motion.button>
             
             <motion.button
@@ -135,12 +187,12 @@ const Hero3D = () => {
               whileTap={{ scale: 0.95 }}
               className="px-8 py-4 glass text-foreground font-semibold rounded-xl border-2 border-primary/30 hover:border-primary/60 transition-all duration-300 backdrop-blur-sm"
             >
-              Get In Touch
+              Connect & Collaborate
             </motion.button>
           </motion.div>
         </motion.div>
 
-        {/* Scroll Indicator */}
+        {/* Enhanced Scroll Indicator */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -150,7 +202,7 @@ const Hero3D = () => {
           <motion.div
             animate={{ y: [0, 10, 0] }}
             transition={{ duration: 2, repeat: Infinity }}
-            className="w-6 h-10 border-2 border-primary/50 rounded-full flex justify-center"
+            className="w-6 h-10 border-2 border-primary/50 rounded-full flex justify-center glow"
           >
             <motion.div
               animate={{ y: [0, 12, 0] }}
@@ -161,29 +213,44 @@ const Hero3D = () => {
         </motion.div>
       </div>
 
-      {/* Decorative Elements */}
+      {/* Enhanced Decorative Elements */}
       <motion.div
         animate={{ 
           rotate: 360,
-          scale: [1, 1.2, 1]
+          scale: [1, 1.3, 1]
         }}
         transition={{ 
           rotate: { duration: 20, repeat: Infinity, ease: "linear" },
           scale: { duration: 4, repeat: Infinity, ease: "easeInOut" }
         }}
-        className="absolute top-20 right-20 w-4 h-4 bg-primary rounded-full opacity-60 blur-sm"
+        className="absolute top-20 right-20 w-4 h-4 bg-primary rounded-full opacity-60 blur-sm glow"
       />
       
       <motion.div
         animate={{ 
           rotate: -360,
-          x: [0, 20, 0]
+          x: [0, 30, 0],
+          y: [0, 15, 0]
         }}
         transition={{ 
           rotate: { duration: 30, repeat: Infinity, ease: "linear" },
-          x: { duration: 6, repeat: Infinity, ease: "easeInOut" }
+          x: { duration: 6, repeat: Infinity, ease: "easeInOut" },
+          y: { duration: 8, repeat: Infinity, ease: "easeInOut" }
         }}
-        className="absolute bottom-20 left-20 w-6 h-6 bg-secondary rounded-full opacity-40 blur-sm"
+        className="absolute bottom-20 left-20 w-6 h-6 bg-secondary rounded-full opacity-40 blur-sm glow-purple"
+      />
+      
+      {/* Additional floating elements */}
+      <motion.div
+        animate={{ 
+          rotate: 180,
+          scale: [0.8, 1.2, 0.8]
+        }}
+        transition={{ 
+          rotate: { duration: 15, repeat: Infinity, ease: "linear" },
+          scale: { duration: 5, repeat: Infinity, ease: "easeInOut" }
+        }}
+        className="absolute top-1/2 right-10 w-3 h-3 bg-accent rounded-full opacity-50 blur-sm"
       />
     </section>
   );
