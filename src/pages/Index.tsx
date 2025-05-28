@@ -1,9 +1,8 @@
-
 import FloatingParticles from '@/components/FloatingParticles';
 import FloatingElements from '@/components/animations/FloatingElements';
 import MorphingShape from '@/components/animations/MorphingShape';
 import Navigation from '@/components/Navigation';
-import Hero from '@/components/Hero';
+import Hero3D from '@/components/Hero3D';
 import About from '@/components/About';
 import Experience from '@/components/Experience';
 import Education from '@/components/Education';
@@ -21,7 +20,7 @@ const Index = () => {
       
       <main className="relative z-10">
         <section id="hero">
-          <Hero />
+          <Hero3D />
         </section>
         
         <section id="about">
