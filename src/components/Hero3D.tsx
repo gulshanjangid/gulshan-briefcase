@@ -1,8 +1,7 @@
-
 import { Canvas } from '@react-three/fiber';
 import { Suspense, useRef } from 'react';
 import { motion } from 'framer-motion';
-import { OrbitControls, PerspectiveCamera, Environment, EffectComposer, Bloom } from '@react-three/drei';
+import { OrbitControls, PerspectiveCamera, Environment } from '@react-three/drei';
 import Computer3D from './animations/Computer3D';
 
 const Hero3DScene = () => {
