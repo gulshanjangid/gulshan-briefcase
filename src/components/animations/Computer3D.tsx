@@ -14,7 +14,7 @@ const Computer3D = () => {
 
   const codeLines = [
     "const developer = {",
-    "  name: 'Alex Carter',", 
+    "  name: 'Gulshan Jangid',", 
     "  skills: ['React', 'Three.js'],",
     "  passion: 'Creating amazing UX'",
     "};",
