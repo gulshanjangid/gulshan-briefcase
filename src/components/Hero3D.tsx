@@ -1,4 +1,3 @@
-
 import { Canvas } from '@react-three/fiber';
 import { Suspense, useRef } from 'react';
 import { motion } from 'framer-motion';
@@ -138,7 +137,7 @@ const Hero3D = () => {
             transition={{ duration: 0.8, delay: 0.8 }}
             className="text-6xl md:text-8xl font-bold mb-6 text-gradient leading-tight"
           >
-            GULSHAN JANGID
+            ALEX CARTER
           </motion.h1>
 
           <motion.h2
