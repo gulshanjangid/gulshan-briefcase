@@ -15,6 +15,7 @@ import ProjectLibrary from '@/components/ProjectLibrary';
 import EnhancedBadges from '@/components/EnhancedBadges';
 import Timeline from '@/components/Timeline';
 import Contact from '@/components/Contact';
+import Chatbot from '@/components/Chatbot';
 
 const Index = () => {
   const [showLoading, setShowLoading] = useState(true);
@@ -81,6 +82,9 @@ const Index = () => {
           © 2024 Nikhil Jangid. Crafted with passion and modern tech.
         </p>
       </footer>
+
+      {/* Chatbot */}
+      <Chatbot />
     </div>
   );
 };
