@@ -7,12 +7,12 @@ import Navigation from '@/components/Navigation';
 import LoadingScreen from '@/components/LoadingScreen';
 import HeroNikhil from '@/components/HeroNikhil';
 import About from '@/components/About';
-import Skills from '@/components/Skills';
+import TechnicalSkills from '@/components/TechnicalSkills';
 import Experience from '@/components/Experience';
 import Education from '@/components/Education';
 import Certifications from '@/components/Certifications';
-import Projects from '@/components/Projects';
-import Badges from '@/components/Badges';
+import ProjectLibrary from '@/components/ProjectLibrary';
+import EnhancedBadges from '@/components/EnhancedBadges';
 import Timeline from '@/components/Timeline';
 import Contact from '@/components/Contact';
 
@@ -44,7 +44,7 @@ const Index = () => {
         </section>
 
         <section id="skills">
-          <Skills />
+          <TechnicalSkills />
         </section>
         
         <section id="experience">
@@ -60,11 +60,11 @@ const Index = () => {
         </section>
         
         <section id="projects">
-          <Projects />
+          <ProjectLibrary />
         </section>
 
         <section id="badges">
-          <Badges />
+          <EnhancedBadges />
         </section>
 
         <section id="timeline">
