@@ -21,42 +21,58 @@ const Navigation = () => {
     }
   };
 
+  const menuItems = ['Home', 'About', 'Skills', 'Projects', 'Badges', 'Timeline', 'Contact'];
+
   return (
     <motion.nav
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.8 }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'glass backdrop-blur-lg' : 'bg-transparent'
+        isScrolled ? 'bg-[#1a1a2e]/90 backdrop-blur-lg border-b border-gray-800' : 'bg-transparent'
       }`}
     >
-      <div className="max-w-6xl mx-auto px-4 py-4">
+      <div className="max-w-7xl mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
+          {/* Logo */}
           <motion.div
             whileHover={{ scale: 1.05 }}
-            className="text-2xl font-bold text-gradient cursor-pointer"
+            className="cursor-pointer"
             onClick={() => scrollToSection('hero')}
           >
-            GJ
+            <span className="text-2xl font-bold">
+              <span className="text-white">Nikhil</span>
+              <span className="text-yellow-400">Jangid</span>
+              <span className="text-white"> -</span>
+            </span>
           </motion.div>
 
-          <div className="hidden md:flex items-center space-x-6">
-            {['About', 'Experience', 'Education', 'Certifications', 'Projects', 'Contact'].map((item) => (
+          {/* Menu */}
+          <div className="hidden md:flex items-center space-x-8">
+            {menuItems.map((item) => (
               <motion.button
                 key={item}
                 whileHover={{ y: -2 }}
                 onClick={() => scrollToSection(item.toLowerCase())}
-                className="text-foreground hover:text-primary transition-colors duration-300 font-medium text-sm"
+                className={`relative text-sm font-medium transition-colors duration-300 ${
+                  item === 'Home' 
+                    ? 'text-yellow-400' 
+                    : 'text-gray-300 hover:text-yellow-400'
+                }`}
               >
                 {item}
+                {item === 'Home' && (
+                  <div className="absolute -bottom-1 left-0 right-0 h-0.5 bg-yellow-400"></div>
+                )}
               </motion.button>
             ))}
           </div>
 
+          {/* Resume Button */}
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="px-6 py-2 bg-gradient-primary text-background font-semibold rounded-lg hover:shadow-lg transition-all duration-300"
+            className="px-6 py-2 bg-yellow-400 text-black font-semibold rounded-full hover:bg-yellow-300 transition-all duration-300"
           >
             Resume
           </motion.button>

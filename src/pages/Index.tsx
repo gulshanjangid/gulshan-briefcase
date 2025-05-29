@@ -1,30 +1,50 @@
+
+import { useState } from 'react';
 import FloatingParticles from '@/components/FloatingParticles';
 import FloatingElements from '@/components/animations/FloatingElements';
 import MorphingShape from '@/components/animations/MorphingShape';
 import Navigation from '@/components/Navigation';
-import Hero3D from '@/components/Hero3D';
+import LoadingScreen from '@/components/LoadingScreen';
+import HeroNikhil from '@/components/HeroNikhil';
 import About from '@/components/About';
+import Skills from '@/components/Skills';
 import Experience from '@/components/Experience';
 import Education from '@/components/Education';
 import Certifications from '@/components/Certifications';
 import Projects from '@/components/Projects';
+import Badges from '@/components/Badges';
+import Timeline from '@/components/Timeline';
 import Contact from '@/components/Contact';
 
 const Index = () => {
+  const [showLoading, setShowLoading] = useState(true);
+
+  const handleLoadingComplete = () => {
+    setShowLoading(false);
+  };
+
+  if (showLoading) {
+    return <LoadingScreen onComplete={handleLoadingComplete} />;
+  }
+
   return (
-    <div className="relative min-h-screen">
+    <div className="relative min-h-screen bg-[#1a1a2e]">
       <FloatingParticles />
       <FloatingElements />
       <MorphingShape />
       <Navigation />
       
       <main className="relative z-10">
-        <section id="hero">
-          <Hero3D />
+        <section id="home">
+          <HeroNikhil />
         </section>
         
         <section id="about">
           <About />
+        </section>
+
+        <section id="skills">
+          <Skills />
         </section>
         
         <section id="experience">
@@ -42,15 +62,23 @@ const Index = () => {
         <section id="projects">
           <Projects />
         </section>
+
+        <section id="badges">
+          <Badges />
+        </section>
+
+        <section id="timeline">
+          <Timeline />
+        </section>
         
         <section id="contact">
           <Contact />
         </section>
       </main>
 
-      <footer className="relative z-10 py-8 text-center border-t border-white/10">
-        <p className="text-muted-foreground">
-          © 2024 Alex Carter. Crafted with passion and modern tech.
+      <footer className="relative z-10 py-8 text-center border-t border-gray-800 bg-[#16213e]">
+        <p className="text-gray-400">
+          © 2024 Nikhil Jangid. Crafted with passion and modern tech.
         </p>
       </footer>
     </div>
