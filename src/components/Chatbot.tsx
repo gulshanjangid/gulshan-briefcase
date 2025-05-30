@@ -1,16 +1,14 @@
 
 import { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { MessageCircle, Send, X, Bot, User } from 'lucide-react';
+import { MessageCircle, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-
-interface Message {
-  id: number;
-  text: string;
-  sender: 'user' | 'bot';
-  timestamp: Date;
-}
+import { Message } from './chatbot/types';
+import { getBotResponse } from './chatbot/utils';
+import ChatHeader from './chatbot/ChatHeader';
+import ChatMessage from './chatbot/ChatMessage';
+import TypingIndicator from './chatbot/TypingIndicator';
+import ChatInput from './chatbot/ChatInput';
 
 const Chatbot = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -33,40 +31,6 @@ const Chatbot = () => {
   useEffect(() => {
     scrollToBottom();
   }, [messages]);
-
-  const getBotResponse = (userMessage: string): string => {
-    const message = userMessage.toLowerCase();
-    
-    if (message.includes('skills') || message.includes('technologies')) {
-      return "Gulshan is proficient in C++, JavaScript, Python, React.js, Node.js, and many other technologies. He has strong expertise in both frontend and backend development, with particular strength in competitive programming and web development.";
-    }
-    
-    if (message.includes('projects') || message.includes('portfolio')) {
-      return "Gulshan has worked on various projects including web applications, algorithms, and competitive programming solutions. You can check out his project library section to see detailed information about his work and achievements.";
-    }
-    
-    if (message.includes('experience') || message.includes('work')) {
-      return "Gulshan has experience in software development, competitive programming, and web development. He has participated in various coding competitions and built multiple projects showcasing his technical skills.";
-    }
-    
-    if (message.includes('education') || message.includes('study')) {
-      return "Gulshan has a strong educational background in computer science and has earned various certifications in programming and web development technologies.";
-    }
-    
-    if (message.includes('contact') || message.includes('reach')) {
-      return "You can contact Gulshan through the contact section at the bottom of this page. Feel free to reach out for collaborations, job opportunities, or any technical discussions!";
-    }
-    
-    if (message.includes('hello') || message.includes('hi') || message.includes('hey')) {
-      return "Hello! Great to meet you! I'm here to help you learn more about Gulshan Jangid. Feel free to ask about his skills, projects, experience, or anything else you'd like to know!";
-    }
-    
-    if (message.includes('thank') || message.includes('thanks')) {
-      return "You're welcome! Is there anything else you'd like to know about Gulshan's background, skills, or projects?";
-    }
-    
-    return "That's an interesting question! I can help you learn about Gulshan's skills, projects, experience, education, or how to contact him. What would you like to know more about?";
-  };
 
   const handleSendMessage = async () => {
     if (!inputValue.trim()) return;
@@ -152,89 +116,26 @@ const Chatbot = () => {
             transition={{ duration: 0.3 }}
             className="fixed bottom-24 right-6 w-80 h-96 bg-gray-900/95 backdrop-blur-lg border border-gray-700 rounded-2xl shadow-2xl z-40 flex flex-col"
           >
-            {/* Header */}
-            <div className="flex items-center gap-3 p-4 border-b border-gray-700">
-              <div className="w-8 h-8 rounded-full bg-gradient-to-r from-yellow-400 to-orange-500 flex items-center justify-center">
-                <Bot size={16} className="text-white" />
-              </div>
-              <div>
-                <h3 className="text-white font-semibold">AI Assistant</h3>
-                <p className="text-gray-400 text-xs">Ask me about Gulshan</p>
-              </div>
-            </div>
+            <ChatHeader />
 
             {/* Messages */}
             <div className="flex-1 overflow-y-auto p-4 space-y-3">
               {messages.map((message) => (
-                <motion.div
-                  key={message.id}
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  className={`flex ${message.sender === 'user' ? 'justify-end' : 'justify-start'}`}
-                >
-                  <div className={`flex items-start gap-2 max-w-[85%] ${message.sender === 'user' ? 'flex-row-reverse' : 'flex-row'}`}>
-                    <div className={`w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 ${
-                      message.sender === 'user' 
-                        ? 'bg-blue-500' 
-                        : 'bg-gradient-to-r from-yellow-400 to-orange-500'
-                    }`}>
-                      {message.sender === 'user' ? <User size={12} /> : <Bot size={12} />}
-                    </div>
-                    <div className={`rounded-2xl px-3 py-2 text-sm ${
-                      message.sender === 'user'
-                        ? 'bg-blue-500 text-white'
-                        : 'bg-gray-800 text-gray-100 border border-gray-700'
-                    }`}>
-                      {message.text}
-                    </div>
-                  </div>
-                </motion.div>
+                <ChatMessage key={message.id} message={message} />
               ))}
 
-              {isTyping && (
-                <motion.div
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  className="flex justify-start"
-                >
-                  <div className="flex items-center gap-2">
-                    <div className="w-6 h-6 rounded-full bg-gradient-to-r from-yellow-400 to-orange-500 flex items-center justify-center">
-                      <Bot size={12} />
-                    </div>
-                    <div className="bg-gray-800 border border-gray-700 rounded-2xl px-3 py-2">
-                      <div className="flex space-x-1">
-                        <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce"></div>
-                        <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}></div>
-                        <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div>
-                      </div>
-                    </div>
-                  </div>
-                </motion.div>
-              )}
+              {isTyping && <TypingIndicator />}
 
               <div ref={messagesEndRef} />
             </div>
 
-            {/* Input */}
-            <div className="p-4 border-t border-gray-700">
-              <div className="flex gap-2">
-                <Input
-                  value={inputValue}
-                  onChange={(e) => setInputValue(e.target.value)}
-                  onKeyPress={handleKeyPress}
-                  placeholder="Ask about Gulshan..."
-                  className="flex-1 bg-gray-800 border-gray-600 text-white placeholder-gray-400 focus:border-yellow-400"
-                />
-                <Button
-                  onClick={handleSendMessage}
-                  disabled={!inputValue.trim() || isTyping}
-                  size="icon"
-                  className="bg-gradient-to-r from-yellow-400 to-orange-500 hover:from-yellow-500 hover:to-orange-600 disabled:opacity-50"
-                >
-                  <Send size={16} />
-                </Button>
-              </div>
-            </div>
+            <ChatInput
+              value={inputValue}
+              onChange={setInputValue}
+              onSend={handleSendMessage}
+              onKeyPress={handleKeyPress}
+              disabled={!inputValue.trim() || isTyping}
+            />
           </motion.div>
         )}
       </AnimatePresence>
