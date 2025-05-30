@@ -37,7 +37,7 @@ const LoadingScreen = ({ onComplete }: LoadingScreenProps) => {
           <div className="w-32 h-32 mx-auto relative">
             <div className="w-full h-full rounded-full bg-gradient-to-r from-green-400 via-yellow-400 to-orange-400 p-1">
               <div className="w-full h-full rounded-full bg-[#1a1a2e] flex items-center justify-center">
-                <span className="text-4xl font-bold text-yellow-400">NJ</span>
+                <span className="text-4xl font-bold text-yellow-400">GJ</span>
               </div>
             </div>
             {/* Floating dots */}
@@ -53,7 +53,7 @@ const LoadingScreen = ({ onComplete }: LoadingScreenProps) => {
           transition={{ delay: 0.3, duration: 0.5 }}
           className="text-4xl font-bold text-white mb-2"
         >
-          Nikhil Jangid
+          Gulshan Jangid
         </motion.h1>
 
         {/* Subtitle */}

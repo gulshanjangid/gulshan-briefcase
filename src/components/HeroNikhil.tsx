@@ -53,7 +53,7 @@ const HeroNikhil = () => {
             Hi, I'm
           </h1>
           <h1 className="text-6xl md:text-8xl font-bold text-white leading-tight">
-            Nikhil Jangid
+            Gulshan Jangid
           </h1>
         </motion.div>
 
