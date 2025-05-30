@@ -79,7 +79,7 @@ const Index = () => {
 
       <footer className="relative z-10 py-8 text-center border-t border-gray-800 bg-[#16213e]">
         <p className="text-gray-400">
-          © 2024 Nikhil Jangid. Crafted with passion and modern tech.
+          © 2024 Gulshan Jangid. Crafted with passion and modern tech.
         </p>
       </footer>
 
