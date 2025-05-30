@@ -17,7 +17,7 @@ const Chatbot = () => {
   const [messages, setMessages] = useState<Message[]>([
     {
       id: 1,
-      text: "Hello! I'm Nikhil's AI assistant. I can help you learn more about his skills, projects, and experience. How can I assist you today?",
+      text: "Hello! I'm Gulshan's AI assistant. I can help you learn more about his skills, projects, and experience. How can I assist you today?",
       sender: 'bot',
       timestamp: new Date()
     }
@@ -38,34 +38,34 @@ const Chatbot = () => {
     const message = userMessage.toLowerCase();
     
     if (message.includes('skills') || message.includes('technologies')) {
-      return "Nikhil is proficient in C++, JavaScript, Python, React.js, Node.js, and many other technologies. He has strong expertise in both frontend and backend development, with particular strength in competitive programming and web development.";
+      return "Gulshan is proficient in C++, JavaScript, Python, React.js, Node.js, and many other technologies. He has strong expertise in both frontend and backend development, with particular strength in competitive programming and web development.";
     }
     
     if (message.includes('projects') || message.includes('portfolio')) {
-      return "Nikhil has worked on various projects including web applications, algorithms, and competitive programming solutions. You can check out his project library section to see detailed information about his work and achievements.";
+      return "Gulshan has worked on various projects including web applications, algorithms, and competitive programming solutions. You can check out his project library section to see detailed information about his work and achievements.";
     }
     
     if (message.includes('experience') || message.includes('work')) {
-      return "Nikhil has experience in software development, competitive programming, and web development. He has participated in various coding competitions and built multiple projects showcasing his technical skills.";
+      return "Gulshan has experience in software development, competitive programming, and web development. He has participated in various coding competitions and built multiple projects showcasing his technical skills.";
     }
     
     if (message.includes('education') || message.includes('study')) {
-      return "Nikhil has a strong educational background in computer science and has earned various certifications in programming and web development technologies.";
+      return "Gulshan has a strong educational background in computer science and has earned various certifications in programming and web development technologies.";
     }
     
     if (message.includes('contact') || message.includes('reach')) {
-      return "You can contact Nikhil through the contact section at the bottom of this page. Feel free to reach out for collaborations, job opportunities, or any technical discussions!";
+      return "You can contact Gulshan through the contact section at the bottom of this page. Feel free to reach out for collaborations, job opportunities, or any technical discussions!";
     }
     
     if (message.includes('hello') || message.includes('hi') || message.includes('hey')) {
-      return "Hello! Great to meet you! I'm here to help you learn more about Nikhil Jangid. Feel free to ask about his skills, projects, experience, or anything else you'd like to know!";
+      return "Hello! Great to meet you! I'm here to help you learn more about Gulshan Jangid. Feel free to ask about his skills, projects, experience, or anything else you'd like to know!";
     }
     
     if (message.includes('thank') || message.includes('thanks')) {
-      return "You're welcome! Is there anything else you'd like to know about Nikhil's background, skills, or projects?";
+      return "You're welcome! Is there anything else you'd like to know about Gulshan's background, skills, or projects?";
     }
     
-    return "That's an interesting question! I can help you learn about Nikhil's skills, projects, experience, education, or how to contact him. What would you like to know more about?";
+    return "That's an interesting question! I can help you learn about Gulshan's skills, projects, experience, education, or how to contact him. What would you like to know more about?";
   };
 
   const handleSendMessage = async () => {
@@ -159,7 +159,7 @@ const Chatbot = () => {
               </div>
               <div>
                 <h3 className="text-white font-semibold">AI Assistant</h3>
-                <p className="text-gray-400 text-xs">Ask me about Nikhil</p>
+                <p className="text-gray-400 text-xs">Ask me about Gulshan</p>
               </div>
             </div>
 
@@ -222,7 +222,7 @@ const Chatbot = () => {
                   value={inputValue}
                   onChange={(e) => setInputValue(e.target.value)}
                   onKeyPress={handleKeyPress}
-                  placeholder="Ask about Nikhil..."
+                  placeholder="Ask about Gulshan..."
                   className="flex-1 bg-gray-800 border-gray-600 text-white placeholder-gray-400 focus:border-yellow-400"
                 />
                 <Button

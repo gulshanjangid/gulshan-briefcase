@@ -41,7 +41,7 @@ const Navigation = () => {
             onClick={() => scrollToSection('hero')}
           >
             <span className="text-2xl font-bold">
-              <span className="text-white">Nikhil</span>
+              <span className="text-white">Gulshan</span>
               <span className="text-yellow-400">Jangid</span>
               <span className="text-white"> -</span>
             </span>
