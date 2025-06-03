@@ -29,10 +29,39 @@ const FreelanceWork = () => {
       images: [
         '/lovable-uploads/fe9d207f-b347-4274-8d34-d96a1f9d9278.png',
         '/lovable-uploads/86ca1f4f-0e92-4c74-a309-7777a35a214e.png',
-        '/lovable-uploads/b0ff9cb1-d274-45d9-878b-90eb572f1f1d.png'
+        '/lovable-uploads/b0ff9cb1-d274-45d9-878b-90eb572f1f1d.png',
+        '/lovable-uploads/8e81e5e9-f733-4028-ac8f-dcc8d8beadc6.png'
       ],
       tools: ['Photoshop', 'After Effects', 'Canva'],
       color: 'from-yellow-500 to-red-500'
+    },
+    {
+      id: 3,
+      title: 'Astroguru Vinod Ji - Celebrity Astrologer',
+      category: 'Brand Identity & Marketing',
+      description: 'Professional astrology service branding with mystic and celestial design elements',
+      images: [
+        '/lovable-uploads/db2979ff-10a2-4d99-bf5f-e71b6c0a1730.png',
+        '/lovable-uploads/8673133a-1221-4f63-b83c-9893106a7d38.png',
+        '/lovable-uploads/220d92b7-f41c-4d92-87a0-2cb7fcbe68e3.png',
+        '/lovable-uploads/02064c92-365c-4cdf-bbfe-c65316accebc.png'
+      ],
+      tools: ['Photoshop', 'Illustrator', 'Canva'],
+      color: 'from-purple-500 to-blue-500'
+    },
+    {
+      id: 4,
+      title: 'Elder Project Limited - Skincare Products',
+      category: 'Product Marketing & E-commerce',
+      description: 'Premium skincare product designs with modern aesthetics and health-focused messaging',
+      images: [
+        '/lovable-uploads/bbc6ce00-14ca-46ac-a03c-aad22c4bb8d7.png',
+        '/lovable-uploads/bd1d9b11-7d10-4872-9af1-60ad9bfcdf94.png',
+        '/lovable-uploads/79a6352b-79bb-4b21-8b39-751ac424530a.png',
+        '/lovable-uploads/33146475-42a4-4c5e-86d0-77e625243122.png'
+      ],
+      tools: ['Photoshop', 'Canva', 'Illustrator'],
+      color: 'from-green-500 to-teal-500'
     }
   ];
 
@@ -111,7 +140,7 @@ const FreelanceWork = () => {
               x: [0, -100 * allImages.length]
             }}
             transition={{
-              duration: 30,
+              duration: 40,
               repeat: Infinity,
               ease: "linear"
             }}
@@ -243,8 +272,8 @@ const FreelanceWork = () => {
           className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8"
         >
           {[
-            { label: 'Projects Completed', value: '50+', icon: '🎨' },
-            { label: 'Happy Clients', value: '25+', icon: '😊' },
+            { label: 'Projects Completed', value: '75+', icon: '🎨' },
+            { label: 'Happy Clients', value: '40+', icon: '😊' },
             { label: 'Design Tools', value: '8+', icon: '🛠️' },
             { label: 'Years Experience', value: '3+', icon: '⭐' }
           ].map((stat, index) => (
