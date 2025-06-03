@@ -1,4 +1,3 @@
-
 import { motion } from 'framer-motion';
 import { useState } from 'react';
 import { Code, Globe, Brain, Smartphone, Settings, ExternalLink, Github } from 'lucide-react';
@@ -47,6 +46,16 @@ const ProjectLibrary = () => {
     },
     {
       id: 4,
+      title: 'AI Image Generator',
+      description: 'Advanced AI-powered image generation platform with multiple models and customization options.',
+      category: 'AI & ML',
+      status: 'Live',
+      tech: ['React', 'Stable Diffusion', 'DALL-E', 'Python'],
+      image: `https://images.unsplash.com/photo-1677442136019-21780ecad995?w=500&h=300&fit=crop`,
+      gradient: 'from-emerald-500 via-teal-500 to-cyan-600'
+    },
+    {
+      id: 5,
       title: 'Flyeng Career',
       description: 'Educational platform for programming, compiler design, and community learning.',
       category: 'Web Apps',
@@ -56,7 +65,7 @@ const ProjectLibrary = () => {
       gradient: 'from-indigo-500 via-purple-500 to-pink-500'
     },
     {
-      id: 5,
+      id: 6,
       title: 'Quiz Website',
       description: 'Interactive platform for creating and taking quizzes with real-time scoring.',
       category: 'Web Apps',
@@ -66,7 +75,7 @@ const ProjectLibrary = () => {
       gradient: 'from-orange-400 via-red-500 to-pink-500'
     },
     {
-      id: 6,
+      id: 7,
       title: 'Hospital Dashboard',
       description: 'Comprehensive healthcare management system with patient tracking.',
       category: 'Web Apps',
