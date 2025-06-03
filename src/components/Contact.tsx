@@ -1,6 +1,7 @@
 
 import { motion } from 'framer-motion';
 import { useState } from 'react';
+import { Github, Linkedin, FileText } from 'lucide-react';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -58,44 +59,53 @@ const Contact = () => {
             <div>
               <h3 className="text-2xl font-bold mb-6">Get in Touch</h3>
               <div className="space-y-4">
-                <motion.div
+                <motion.a
+                  href="https://github.com/gulshanjangid"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   whileHover={{ x: 10 }}
                   className="flex items-center space-x-4 p-4 glass rounded-lg border border-white/10 hover:border-primary/30 transition-all duration-300"
                 >
                   <div className="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center">
-                    <span className="text-primary font-bold">@</span>
-                  </div>
-                  <div>
-                    <p className="font-medium">Email</p>
-                    <p className="text-muted-foreground">alex.carter@example.com</p>
-                  </div>
-                </motion.div>
-
-                <motion.div
-                  whileHover={{ x: 10 }}
-                  className="flex items-center space-x-4 p-4 glass rounded-lg border border-white/10 hover:border-primary/30 transition-all duration-300"
-                >
-                  <div className="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center">
-                    <span className="text-primary font-bold">#</span>
-                  </div>
-                  <div>
-                    <p className="font-medium">LinkedIn</p>
-                    <p className="text-muted-foreground">@alexcarter</p>
-                  </div>
-                </motion.div>
-
-                <motion.div
-                  whileHover={{ x: 10 }}
-                  className="flex items-center space-x-4 p-4 glass rounded-lg border border-white/10 hover:border-primary/30 transition-all duration-300"
-                >
-                  <div className="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center">
-                    <span className="text-primary font-bold">{ }</span>
+                    <Github className="text-primary" size={20} />
                   </div>
                   <div>
                     <p className="font-medium">GitHub</p>
-                    <p className="text-muted-foreground">@alexcarter-dev</p>
+                    <p className="text-muted-foreground">@gulshanjangid</p>
                   </div>
-                </motion.div>
+                </motion.a>
+
+                <motion.a
+                  href="https://www.linkedin.com/in/gulshan-jangid-2a2533265/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  whileHover={{ x: 10 }}
+                  className="flex items-center space-x-4 p-4 glass rounded-lg border border-white/10 hover:border-primary/30 transition-all duration-300"
+                >
+                  <div className="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center">
+                    <Linkedin className="text-primary" size={20} />
+                  </div>
+                  <div>
+                    <p className="font-medium">LinkedIn</p>
+                    <p className="text-muted-foreground">Gulshan Jangid</p>
+                  </div>
+                </motion.a>
+
+                <motion.a
+                  href="https://drive.google.com/file/d/1bX8IDBVaB264k_DLEGHZrshYffQZhu05/view"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  whileHover={{ x: 10 }}
+                  className="flex items-center space-x-4 p-4 glass rounded-lg border border-white/10 hover:border-primary/30 transition-all duration-300"
+                >
+                  <div className="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center">
+                    <FileText className="text-primary" size={20} />
+                  </div>
+                  <div>
+                    <p className="font-medium">Resume</p>
+                    <p className="text-muted-foreground">Download CV</p>
+                  </div>
+                </motion.a>
               </div>
             </div>
           </motion.div>

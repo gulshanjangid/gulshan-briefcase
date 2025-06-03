@@ -1,6 +1,6 @@
 
 import { motion } from 'framer-motion';
-import { Github, Linkedin, Code, ExternalLink, MessageCircle } from 'lucide-react';
+import { Github, Linkedin, Code, ExternalLink, MessageCircle, FileText } from 'lucide-react';
 
 const HeroNikhil = () => {
   const badges = [
@@ -10,11 +10,19 @@ const HeroNikhil = () => {
   ];
 
   const socialLinks = [
-    { icon: Github, href: '#', label: 'GitHub' },
-    { icon: Linkedin, href: '#', label: 'LinkedIn' },
-    { icon: Code, href: '#', label: 'CodePen' },
-    { icon: ExternalLink, href: '#', label: 'Portfolio' }
+    { icon: Github, href: 'https://github.com/gulshanjangid', label: 'GitHub' },
+    { icon: Linkedin, href: 'https://www.linkedin.com/in/gulshan-jangid-2a2533265/', label: 'LinkedIn' },
+    { icon: FileText, href: 'https://drive.google.com/file/d/1bX8IDBVaB264k_DLEGHZrshYffQZhu05/view', label: 'Resume' },
+    { icon: Code, href: '#projects', label: 'Projects' }
   ];
+
+  const scrollToContact = () => {
+    document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+  };
+
+  const scrollToProjects = () => {
+    document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' });
+  };
 
   return (
     <section className="min-h-screen bg-[#1a1a2e] flex items-center justify-center relative overflow-hidden pt-20">
@@ -84,6 +92,7 @@ const HeroNikhil = () => {
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
+            onClick={scrollToContact}
             className="px-8 py-3 bg-yellow-400 text-black font-semibold rounded-full hover:bg-yellow-300 transition-all duration-300"
           >
             Get in touch
@@ -92,6 +101,7 @@ const HeroNikhil = () => {
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
+            onClick={scrollToProjects}
             className="px-8 py-3 bg-transparent border-2 border-gray-600 text-white font-semibold rounded-full hover:border-yellow-400 hover:text-yellow-400 transition-all duration-300"
           >
             View projects
@@ -109,6 +119,8 @@ const HeroNikhil = () => {
             <motion.a
               key={social.label}
               href={social.href}
+              target={social.href.startsWith('http') ? '_blank' : '_self'}
+              rel={social.href.startsWith('http') ? 'noopener noreferrer' : undefined}
               whileHover={{ scale: 1.1, y: -5 }}
               whileTap={{ scale: 0.95 }}
               className="w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center border border-gray-700 hover:border-yellow-400 hover:bg-gray-700 transition-all duration-300"
