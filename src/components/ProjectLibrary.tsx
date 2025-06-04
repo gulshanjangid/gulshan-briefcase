@@ -23,9 +23,7 @@ const ProjectLibrary = () => {
       status: 'Live',
       tech: ['React', 'Node.js', 'MongoDB'],
       image: '/lovable-uploads/b67aa8a9-55c7-41ca-a735-c1cc07ee6ebf.png',
-      gradient: 'from-purple-500 via-pink-500 to-purple-600',
-      liveLink: '',
-      githubLink: ''
+      gradient: 'from-purple-500 via-pink-500 to-purple-600'
     },
     {
       id: 2,
@@ -34,10 +32,8 @@ const ProjectLibrary = () => {
       category: 'AI & ML',
       status: 'Live',
       tech: ['Python', 'TensorFlow', 'React'],
-      image: '/lovable-uploads/a0e54c60-a7f6-4ff2-81ab-ab946f22fbd5.png',
-      gradient: 'from-cyan-400 via-blue-500 to-blue-600',
-      liveLink: '',
-      githubLink: ''
+      image: '/lovable-uploads/a2a4facc-bb9e-41a2-8c46-531c9ab0407d.png',
+      gradient: 'from-cyan-400 via-blue-500 to-blue-600'
     },
     {
       id: 3,
@@ -47,9 +43,7 @@ const ProjectLibrary = () => {
       status: 'In Progress',
       tech: ['Next.js', 'OpenAI', 'Tailwind'],
       image: '/lovable-uploads/cb82c2b7-06f8-4f80-8a22-30dd6780aa69.png',
-      gradient: 'from-blue-500 via-indigo-500 to-purple-600',
-      liveLink: '',
-      githubLink: ''
+      gradient: 'from-blue-500 via-indigo-500 to-purple-600'
     },
     {
       id: 4,
@@ -58,22 +52,18 @@ const ProjectLibrary = () => {
       category: 'AI & ML',
       status: 'Live',
       tech: ['React', 'Stable Diffusion', 'DALL-E', 'Python'],
-      image: `https://images.unsplash.com/photo-1677442136019-21780ecad995?w=500&h=300&fit=crop`,
-      gradient: 'from-emerald-500 via-teal-500 to-cyan-600',
-      liveLink: '',
-      githubLink: ''
+      image: '/lovable-uploads/73642363-3121-4413-a014-f8c024186bb3.png',
+      gradient: 'from-emerald-500 via-teal-500 to-cyan-600'
     },
     {
       id: 5,
       title: 'Flyeng Career',
       description: 'Educational platform for programming, compiler design, and community learning.',
       category: 'Web Apps',
-      status: 'Live',
+      status: 'In Progress',
       tech: ['React', 'Express', 'PostgreSQL'],
-      image: '/lovable-uploads/5d0defe2-7fcd-4348-94d2-cfb3b5b3c6ad.png',
-      gradient: 'from-indigo-500 via-purple-500 to-pink-500',
-      liveLink: 'https://storied-twilight-754805.netlify.app/',
-      githubLink: ''
+      image: '/lovable-uploads/505d267f-1eff-416f-a229-e05e37b6e8ad.png',
+      gradient: 'from-indigo-500 via-purple-500 to-pink-500'
     },
     {
       id: 6,
@@ -83,9 +73,7 @@ const ProjectLibrary = () => {
       status: 'In Progress',
       tech: ['React', 'Node.js', 'Socket.io'],
       image: '/lovable-uploads/4a6091e0-8960-4901-b2dd-8913bb963d8c.png',
-      gradient: 'from-orange-400 via-red-500 to-pink-500',
-      liveLink: '',
-      githubLink: ''
+      gradient: 'from-orange-400 via-red-500 to-pink-500'
     },
     {
       id: 7,
@@ -95,39 +83,13 @@ const ProjectLibrary = () => {
       status: 'In Progress',
       tech: ['React', 'Express', 'MySQL'],
       image: '/lovable-uploads/d15de0e3-ea5a-4fe2-adc2-a0a7245ca141.png',
-      gradient: 'from-blue-400 via-cyan-500 to-teal-500',
-      liveLink: '',
-      githubLink: ''
-    },
-    {
-      id: 8,
-      title: 'AI Chatbot',
-      description: 'Intelligent AI-powered assistant for seamless conversations with natural language processing.',
-      category: 'AI & ML',
-      status: 'Live',
-      tech: ['React', 'OpenAI', 'Node.js', 'NLP'],
-      image: '/lovable-uploads/fa0c3887-4bfd-4090-bb15-78583b829f18.png',
-      gradient: 'from-violet-500 via-blue-500 to-cyan-500',
-      liveLink: 'https://effervescent-manatee-acc1d6.netlify.app/',
-      githubLink: ''
+      gradient: 'from-blue-400 via-cyan-500 to-teal-500'
     }
   ];
 
   const filteredProjects = activeCategory === 'All Projects' 
     ? projects 
     : projects.filter(project => project.category === activeCategory);
-
-  const handleLiveClick = (liveLink: string) => {
-    if (liveLink) {
-      window.open(liveLink, '_blank');
-    }
-  };
-
-  const handleGithubClick = (githubLink: string) => {
-    if (githubLink) {
-      window.open(githubLink, '_blank');
-    }
-  };
 
   return (
     <section id="projects" className="py-20 px-4 bg-[#16213e] relative overflow-hidden">
@@ -200,7 +162,7 @@ const ProjectLibrary = () => {
                   alt={project.title}
                   className="w-full h-full object-cover"
                 />
-                <div className={`absolute inset-0 bg-gradient-to-br ${project.gradient} opacity-90`}></div>
+                <div className={`absolute inset-0 bg-gradient-to-br ${project.gradient} opacity-20`}></div>
                 <div className="absolute inset-0 bg-black/30"></div>
                 
                 {/* Status Badge */}
@@ -219,26 +181,20 @@ const ProjectLibrary = () => {
 
                 {/* Project Actions */}
                 <div className="absolute bottom-4 right-4 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  {project.githubLink && (
-                    <motion.button
-                      whileHover={{ scale: 1.1 }}
-                      whileTap={{ scale: 0.9 }}
-                      onClick={() => handleGithubClick(project.githubLink)}
-                      className="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-white/30 transition-colors"
-                    >
-                      <Github size={16} />
-                    </motion.button>
-                  )}
-                  {project.liveLink && (
-                    <motion.button
-                      whileHover={{ scale: 1.1 }}
-                      whileTap={{ scale: 0.9 }}
-                      onClick={() => handleLiveClick(project.liveLink)}
-                      className="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-white/30 transition-colors"
-                    >
-                      <ExternalLink size={16} />
-                    </motion.button>
-                  )}
+                  <motion.button
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.9 }}
+                    className="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-white/30 transition-colors"
+                  >
+                    <Github size={16} />
+                  </motion.button>
+                  <motion.button
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.9 }}
+                    className="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-white/30 transition-colors"
+                  >
+                    <ExternalLink size={16} />
+                  </motion.button>
                 </div>
               </div>
 
@@ -268,7 +224,6 @@ const ProjectLibrary = () => {
                 <motion.button
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
-                  onClick={() => project.liveLink && handleLiveClick(project.liveLink)}
                   className="w-full py-2 bg-gradient-to-r from-yellow-400 to-green-400 text-black font-semibold rounded-lg hover:shadow-lg transition-all duration-300"
                 >
                   Discover
