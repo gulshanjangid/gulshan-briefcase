@@ -1,4 +1,3 @@
-
 import { motion } from 'framer-motion';
 import { useState } from 'react';
 import { Code, Globe, Brain, Smartphone, Settings, ExternalLink, Github } from 'lucide-react';
@@ -52,7 +51,7 @@ const ProjectLibrary = () => {
       category: 'AI & ML',
       status: 'Live',
       tech: ['React', 'Stable Diffusion', 'DALL-E', 'Python'],
-      image: '/lovable-uploads/73642363-3121-4413-a014-f8c024186bb3.png',
+      image: `https://images.unsplash.com/photo-1677442136019-21780ecad995?w=500&h=300&fit=crop`,
       gradient: 'from-emerald-500 via-teal-500 to-cyan-600'
     },
     {
@@ -157,12 +156,7 @@ const ProjectLibrary = () => {
             >
               {/* Project Image */}
               <div className="relative h-48 overflow-hidden">
-                <img 
-                  src={project.image} 
-                  alt={project.title}
-                  className="w-full h-full object-cover"
-                />
-                <div className={`absolute inset-0 bg-gradient-to-br ${project.gradient} opacity-20`}></div>
+                <div className={`absolute inset-0 bg-gradient-to-br ${project.gradient} opacity-90`}></div>
                 <div className="absolute inset-0 bg-black/30"></div>
                 
                 {/* Status Badge */}
