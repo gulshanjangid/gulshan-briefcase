@@ -68,6 +68,67 @@ const About = () => {
             viewport={{ once: true }}
             className="space-y-6"
           >
+            {/* Profile Photo */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.5 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="flex justify-center mb-8"
+            >
+              <motion.div 
+                className="relative w-48 h-48"
+                whileHover={{ scale: 1.1 }}
+                transition={{ duration: 0.3, ease: "easeOut" }}
+              >
+                <motion.div 
+                  className="w-full h-full rounded-full bg-gradient-to-r from-yellow-400 to-orange-500 p-1 animate-glow-pulse"
+                  whileHover={{ 
+                    boxShadow: "0 0 40px rgba(250, 204, 21, 0.6)",
+                    rotate: 360 
+                  }}
+                  transition={{ duration: 0.8 }}
+                />
+                <motion.div 
+                  className="absolute inset-1 rounded-full overflow-hidden bg-gray-800"
+                  whileHover={{ scale: 1.05 }}
+                  transition={{ duration: 0.3 }}
+                >
+                  <img
+                    src="/lovable-uploads/5f6aa6a1-73bf-43c8-8fc1-b6814dc6fc26.png"
+                    alt="Gulshan Jangid - Full Stack Developer"
+                    className="w-full h-full object-cover rounded-full"
+                  />
+                </motion.div>
+                {/* Floating elements around photo */}
+                <motion.div
+                  className="absolute -top-2 -right-2 w-4 h-4 bg-yellow-400 rounded-full"
+                  animate={{
+                    scale: [1, 1.2, 1],
+                    opacity: [0.7, 1, 0.7],
+                  }}
+                  transition={{
+                    duration: 2,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                  }}
+                />
+                <motion.div
+                  className="absolute -bottom-2 -left-2 w-3 h-3 bg-orange-400 rounded-full"
+                  animate={{
+                    scale: [1, 1.3, 1],
+                    opacity: [0.6, 1, 0.6],
+                  }}
+                  transition={{
+                    duration: 2.5,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                    delay: 0.5,
+                  }}
+                />
+              </motion.div>
+            </motion.div>
+
             <div className="glass p-8 rounded-2xl">
               <h3 className="text-2xl font-bold mb-4 text-primary">My Journey</h3>
               <p className="text-muted-foreground leading-relaxed mb-4">
