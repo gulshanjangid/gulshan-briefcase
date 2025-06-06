@@ -1,3 +1,4 @@
+
 import { motion } from 'framer-motion';
 import { useState } from 'react';
 import { Code, Globe, Brain, Smartphone, Settings, ExternalLink, Github } from 'lucide-react';
@@ -21,7 +22,7 @@ const ProjectLibrary = () => {
       category: 'Web Apps',
       status: 'Live',
       tech: ['React', 'Node.js', 'MongoDB'],
-      image: '/lovable-uploads/b67aa8a9-55c7-41ca-a735-c1cc07ee6ebf.png',
+      image: 'https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=500&h=300&fit=crop',
       gradient: 'from-purple-500 via-pink-500 to-purple-600'
     },
     {
@@ -31,7 +32,7 @@ const ProjectLibrary = () => {
       category: 'AI & ML',
       status: 'Live',
       tech: ['Python', 'TensorFlow', 'React'],
-      image: '/lovable-uploads/a2a4facc-bb9e-41a2-8c46-531c9ab0407d.png',
+      image: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=500&h=300&fit=crop',
       gradient: 'from-cyan-400 via-blue-500 to-blue-600'
     },
     {
@@ -41,7 +42,7 @@ const ProjectLibrary = () => {
       category: 'AI & ML',
       status: 'In Progress',
       tech: ['Next.js', 'OpenAI', 'Tailwind'],
-      image: '/lovable-uploads/cb82c2b7-06f8-4f80-8a22-30dd6780aa69.png',
+      image: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=500&h=300&fit=crop',
       gradient: 'from-blue-500 via-indigo-500 to-purple-600'
     },
     {
@@ -51,7 +52,7 @@ const ProjectLibrary = () => {
       category: 'AI & ML',
       status: 'Live',
       tech: ['React', 'Stable Diffusion', 'DALL-E', 'Python'],
-      image: `https://images.unsplash.com/photo-1677442136019-21780ecad995?w=500&h=300&fit=crop`,
+      image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=500&h=300&fit=crop',
       gradient: 'from-emerald-500 via-teal-500 to-cyan-600'
     },
     {
@@ -61,7 +62,7 @@ const ProjectLibrary = () => {
       category: 'Web Apps',
       status: 'In Progress',
       tech: ['React', 'Express', 'PostgreSQL'],
-      image: '/lovable-uploads/505d267f-1eff-416f-a229-e05e37b6e8ad.png',
+      image: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=500&h=300&fit=crop',
       gradient: 'from-indigo-500 via-purple-500 to-pink-500'
     },
     {
@@ -71,7 +72,7 @@ const ProjectLibrary = () => {
       category: 'Web Apps',
       status: 'In Progress',
       tech: ['React', 'Node.js', 'Socket.io'],
-      image: '/lovable-uploads/4a6091e0-8960-4901-b2dd-8913bb963d8c.png',
+      image: 'https://images.unsplash.com/photo-1606868306217-dbf5046868d2?w=500&h=300&fit=crop',
       gradient: 'from-orange-400 via-red-500 to-pink-500'
     },
     {
@@ -81,7 +82,7 @@ const ProjectLibrary = () => {
       category: 'Web Apps',
       status: 'In Progress',
       tech: ['React', 'Express', 'MySQL'],
-      image: '/lovable-uploads/d15de0e3-ea5a-4fe2-adc2-a0a7245ca141.png',
+      image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=500&h=300&fit=crop',
       gradient: 'from-blue-400 via-cyan-500 to-teal-500'
     }
   ];
@@ -156,7 +157,12 @@ const ProjectLibrary = () => {
             >
               {/* Project Image */}
               <div className="relative h-48 overflow-hidden">
-                <div className={`absolute inset-0 bg-gradient-to-br ${project.gradient} opacity-90`}></div>
+                <img 
+                  src={project.image} 
+                  alt={project.title}
+                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                />
+                <div className={`absolute inset-0 bg-gradient-to-br ${project.gradient} opacity-60 mix-blend-overlay`}></div>
                 <div className="absolute inset-0 bg-black/30"></div>
                 
                 {/* Status Badge */}
