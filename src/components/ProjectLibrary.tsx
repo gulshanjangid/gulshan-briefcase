@@ -1,4 +1,3 @@
-
 import { motion } from 'framer-motion';
 import { useState } from 'react';
 import { Code, Globe, Brain, Smartphone, Settings, ExternalLink, Github } from 'lucide-react';
@@ -82,7 +81,7 @@ const ProjectLibrary = () => {
       category: 'Web Apps',
       status: 'In Progress',
       tech: ['React', 'Express', 'MySQL'],
-      image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=500&h=300&fit=crop',
+      image: 'https://images.unsplash.com/photo-1551601651-2a8555f1a136?w=500&h=300&fit=crop',
       gradient: 'from-blue-400 via-cyan-500 to-teal-500'
     }
   ];
