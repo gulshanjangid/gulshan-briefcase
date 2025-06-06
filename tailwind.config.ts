@@ -57,6 +57,12 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
+				// Custom theme colors from your palette
+				coral: '#e63946',
+				cream: '#f1faee',
+				mint: '#a8dadc',
+				steel: '#457b9d',
+				navy: '#1d3557',
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -77,8 +83,8 @@ export default {
 					'100%': { opacity: '1', transform: 'translateX(0)' }
 				},
 				'glow-pulse': {
-					'0%, 100%': { boxShadow: '0 0 20px rgba(0, 212, 255, 0.3)' },
-					'50%': { boxShadow: '0 0 40px rgba(0, 212, 255, 0.6)' }
+					'0%, 100%': { boxShadow: '0 0 20px rgba(230, 57, 70, 0.3)' },
+					'50%': { boxShadow: '0 0 40px rgba(230, 57, 70, 0.6)' }
 				}
 			},
 			animation: {
