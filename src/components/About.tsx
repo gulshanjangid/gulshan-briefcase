@@ -54,9 +54,9 @@ const About = () => {
         >
           <h2 className="text-5xl md:text-6xl font-bold mb-6 text-gradient">About Me</h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            I'm a passionate full-stack developer with 5+ years of experience creating 
-            digital solutions that blend creativity with functionality. My journey spans 
-            from building scalable web applications to crafting intuitive user experiences.
+            I'm a passionate full-stack developer with a strong foundation in building dynamic 
+            and creating digital solutions that blend creativity with functionality. My journey 
+            spans from building scalable web applications to crafting intuitive user experiences.
           </p>
         </motion.div>
 
