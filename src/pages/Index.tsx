@@ -3,6 +3,7 @@ import { useState } from 'react';
 import FloatingParticles from '@/components/FloatingParticles';
 import FloatingElements from '@/components/animations/FloatingElements';
 import MorphingShape from '@/components/animations/MorphingShape';
+import Cursor3D from '@/components/animations/Cursor3D';
 import Navigation from '@/components/Navigation';
 import LoadingScreen from '@/components/LoadingScreen';
 import HeroNikhil from '@/components/HeroNikhil';
@@ -34,6 +35,7 @@ const Index = () => {
       <FloatingParticles />
       <FloatingElements />
       <MorphingShape />
+      <Cursor3D />
       <Navigation />
       
       <main className="relative z-10">

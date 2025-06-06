@@ -41,16 +41,28 @@
 @layer base {
   * {
     @apply border-border;
+    cursor: none; /* Hide default cursor */
   }
 
   body {
     @apply bg-background text-foreground font-inter;
     background: linear-gradient(135deg, #1d3557 0%, #457b9d  50%, #a8dadc 100%);
     overflow-x: hidden;
+    cursor: none; /* Hide default cursor on body */
   }
 
   html {
     scroll-behavior: smooth;
+    cursor: none; /* Hide default cursor on html */
+  }
+
+  /* Show cursor on input elements for usability */
+  input, textarea, select {
+    cursor: text !important;
+  }
+
+  button, a, [role="button"] {
+    cursor: none !important;
   }
 }
 
@@ -82,6 +94,10 @@
 
   .animate-glow-pulse {
     animation: glow-pulse 2s ease-in-out infinite alternate;
+  }
+
+  .cursor-hover {
+    /* Add this class to elements that should trigger cursor hover effects */
   }
 
   @keyframes glow-pulse {
