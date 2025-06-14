@@ -61,7 +61,7 @@ const ProjectLibrary = () => {
       category: 'Web Apps',
       status: 'In Progress',
       tech: ['React', 'Express', 'PostgreSQL'],
-      image: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=500&h=300&fit=crop',
+      image: '/lovable-uploads/b6d65233-c174-4627-8291-5143070e267d.png',
       gradient: 'from-indigo-500 via-purple-500 to-pink-500'
     },
     {
