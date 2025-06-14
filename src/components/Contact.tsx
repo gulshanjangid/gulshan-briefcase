@@ -2,6 +2,7 @@
 import { motion } from 'framer-motion';
 import { useState } from 'react';
 import { Github, Linkedin, FileText } from 'lucide-react';
+import { useToast } from '@/hooks/use-toast';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -11,6 +12,10 @@ const Contact = () => {
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const { toast } = useToast();
+
+  // WhatsApp number (replace with your actual WhatsApp number)
+  const whatsappNumber = "919812345678"; // Format: country code + number without + or spaces
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({
@@ -21,12 +26,42 @@ const Contact = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    
+    if (!formData.name || !formData.email || !formData.message) {
+      toast({
+        title: "Error",
+        description: "Please fill in all fields",
+        variant: "destructive",
+      });
+      return;
+    }
+
     setIsSubmitting(true);
     
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 2000));
+    // Simulate form processing
+    await new Promise(resolve => setTimeout(resolve, 1000));
     
-    console.log('Form submitted:', formData);
+    // Create WhatsApp message
+    const whatsappMessage = `Hello! I'm ${formData.name}.
+
+Email: ${formData.email}
+
+Message: ${formData.message}
+
+Looking forward to connecting with you!`;
+
+    // Create WhatsApp URL
+    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
+    
+    // Show success toast
+    toast({
+      title: "Redirecting to WhatsApp",
+      description: "You'll be redirected to WhatsApp to send your message.",
+    });
+
+    // Redirect to WhatsApp
+    window.open(whatsappUrl, '_blank');
+    
     setIsSubmitting(false);
     setFormData({ name: '', email: '', message: '' });
   };
@@ -176,7 +211,7 @@ const Contact = () => {
                 disabled={isSubmitting}
                 className="w-full px-6 py-3 bg-gradient-primary text-background font-semibold rounded-lg hover:shadow-lg transition-all duration-300 disabled:opacity-50"
               >
-                {isSubmitting ? 'Sending...' : 'Send Message'}
+                {isSubmitting ? 'Redirecting to WhatsApp...' : 'Send via WhatsApp'}
               </motion.button>
             </form>
           </motion.div>
