@@ -1,3 +1,4 @@
+
 import { motion } from 'framer-motion';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Award, Calendar, ExternalLink, CheckCircle } from 'lucide-react';
@@ -101,6 +102,34 @@ const Certifications = () => {
       issuer: 'Deloitte',
       image: '/lovable-uploads/93f9065c-e55c-467f-a6fd-1d33945cae73.png',
       date: '2025'
+    },
+    {
+      id: 6,
+      title: 'Java (Basic)',
+      issuer: 'HackerRank',
+      image: '/lovable-uploads/6fd4c356-8808-42d3-bc62-5e4c00a87ab3.png',
+      date: '2024'
+    },
+    {
+      id: 7,
+      title: 'JavaScript (Intermediate)',
+      issuer: 'HackerRank',
+      image: '/lovable-uploads/1a38af8d-e172-4998-be16-88e7602ac844.png',
+      date: '2024'
+    },
+    {
+      id: 8,
+      title: 'NodeJs + ExpressJs + MongoDB',
+      issuer: 'KnowledgeGate',
+      image: '/lovable-uploads/e0728a3c-68de-4a4f-8eab-1530092c1b68.png',
+      date: '2024'
+    },
+    {
+      id: 9,
+      title: 'React (Basic)',
+      issuer: 'HackerRank',
+      image: '/lovable-uploads/ab6d970d-754f-4044-956f-35b5ff8dfd4d.png',
+      date: '2024'
     }
   ];
 
