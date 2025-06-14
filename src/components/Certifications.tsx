@@ -1,4 +1,3 @@
-
 import { motion } from 'framer-motion';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Award, Calendar, ExternalLink, CheckCircle } from 'lucide-react';
@@ -67,6 +66,44 @@ const Certifications = () => {
     }
   ];
 
+  const certificateImages = [
+    {
+      id: 1,
+      title: 'Introduction to CSS',
+      issuer: 'SoloLearn',
+      image: '/lovable-uploads/4af23188-2838-4646-a558-1a0d1f10e9b9.png',
+      date: '2023'
+    },
+    {
+      id: 2,
+      title: 'The Whack Hackathon 2.0',
+      issuer: 'Amity University',
+      image: '/lovable-uploads/d66594b0-cedf-490d-9cdb-93d217ccb398.png',
+      date: '2023'
+    },
+    {
+      id: 3,
+      title: 'Introduction to HTML',
+      issuer: 'SoloLearn',
+      image: '/lovable-uploads/bbd16d08-6c22-427e-a021-dec056a6d821.png',
+      date: '2023'
+    },
+    {
+      id: 4,
+      title: 'JavaScript Certification Test',
+      issuer: 'KG Coding',
+      image: '/lovable-uploads/0cae2aad-9638-4543-aa2f-a1913aa8b420.png',
+      date: '2024'
+    },
+    {
+      id: 5,
+      title: 'Technology Job Simulation',
+      issuer: 'Deloitte',
+      image: '/lovable-uploads/93f9065c-e55c-467f-a6fd-1d33945cae73.png',
+      date: '2025'
+    }
+  ];
+
   return (
     <section className="py-20 px-4">
       <div className="max-w-6xl mx-auto">
@@ -86,6 +123,74 @@ const Certifications = () => {
           </p>
         </motion.div>
 
+        {/* Certificate Images Grid */}
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="mb-16"
+        >
+          <h3 className="text-3xl font-bold text-center mb-12 text-foreground">
+            Certificate Gallery
+          </h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {certificateImages.map((cert, index) => (
+              <motion.div
+                key={cert.id}
+                initial={{ opacity: 0, scale: 0.8, rotateY: 45 }}
+                whileInView={{ opacity: 1, scale: 1, rotateY: 0 }}
+                transition={{ 
+                  duration: 0.6, 
+                  delay: index * 0.1,
+                  type: "spring",
+                  stiffness: 100
+                }}
+                viewport={{ once: true }}
+                whileHover={{ 
+                  scale: 1.05, 
+                  rotateY: 5,
+                  z: 50,
+                  transition: { duration: 0.3 }
+                }}
+                className="group relative"
+              >
+                <div className="glass rounded-2xl overflow-hidden border border-white/20 hover:border-primary/50 transition-all duration-300">
+                  <div className="relative overflow-hidden">
+                    <motion.img
+                      src={cert.image}
+                      alt={cert.title}
+                      className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
+                      whileHover={{ scale: 1.1 }}
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                    <motion.div
+                      initial={{ opacity: 0, y: 20 }}
+                      whileHover={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.3 }}
+                      className="absolute bottom-4 left-4 right-4 text-white"
+                    >
+                      <h4 className="font-bold text-lg mb-1">{cert.title}</h4>
+                      <p className="text-sm opacity-90">{cert.issuer} • {cert.date}</p>
+                    </motion.div>
+                  </div>
+                </div>
+                
+                {/* Floating badge */}
+                <motion.div
+                  initial={{ scale: 0, rotate: -180 }}
+                  whileInView={{ scale: 1, rotate: 0 }}
+                  transition={{ delay: index * 0.1 + 0.5, duration: 0.5 }}
+                  className="absolute -top-3 -right-3 w-8 h-8 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full flex items-center justify-center shadow-lg"
+                >
+                  <Award className="w-4 h-4 text-white" />
+                </motion.div>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
+
+        {/* Existing Certification Cards */}
         <div className="grid md:grid-cols-2 gap-8">
           {certifications.map((cert, index) => (
             <motion.div
