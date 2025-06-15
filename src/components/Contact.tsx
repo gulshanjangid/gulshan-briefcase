@@ -1,4 +1,3 @@
-
 import { motion } from 'framer-motion';
 import { useState } from 'react';
 import { Github, Linkedin, FileText } from 'lucide-react';
@@ -15,7 +14,7 @@ const Contact = () => {
   const { toast } = useToast();
 
   // WhatsApp number (replace with your actual WhatsApp number)
-  const whatsappNumber = "919812345678"; // Format: country code + number without + or spaces
+  const whatsappNumber = "919352335662"; // Format: country code + number without + or spaces
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({
