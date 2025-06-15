@@ -206,7 +206,7 @@ const Timeline = () => {
                   </div>
                   <motion.span 
                     className="text-sm text-gray-400 bg-gray-700 px-3 py-1 rounded-full"
-                    whileHover={{ bg: 'rgb(75 85 99)' }}
+                    whileHover={{ backgroundColor: 'rgb(75 85 99)' }}
                   >
                     {event.date}
                   </motion.span>
