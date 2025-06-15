@@ -13,7 +13,6 @@ import Education from '@/components/Education';
 import Certifications from '@/components/Certifications';
 import ProjectLibrary from '@/components/ProjectLibrary';
 import FreelanceWork from '@/components/FreelanceWork';
-import EnhancedBadges from '@/components/EnhancedBadges';
 import Timeline from '@/components/Timeline';
 import Contact from '@/components/Contact';
 import Chatbot from '@/components/Chatbot';
@@ -67,10 +66,6 @@ const Index = () => {
 
         <section id="freelance">
           <FreelanceWork />
-        </section>
-
-        <section id="badges">
-          <EnhancedBadges />
         </section>
 
         <section id="timeline">
