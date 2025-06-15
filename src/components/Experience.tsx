@@ -7,32 +7,32 @@ const Experience = () => {
   const experiences = [
     {
       id: 1,
-      title: 'Full-Stack Development Intern',
-      company: 'TechCorp Solutions',
-      location: 'San Francisco, CA',
-      duration: 'Jun 2023 - Aug 2023',
-      description: 'Developed and maintained web applications using React, Node.js, and MongoDB. Collaborated with senior developers on feature implementation and bug fixes.',
-      technologies: ['React', 'Node.js', 'MongoDB', 'Express.js', 'Git'],
-      type: 'Internship'
+      title: 'Graphic Designer',
+      company: 'Media Fourth',
+      location: 'Part-time',
+      duration: 'Sep, 2024 - Present (9 Months)',
+      description: 'As a Part-time Graphic Designer at Media Fourth (2024-Present), I create visual concepts to communicate ideas that inspire, inform, and captivate consumers. My responsibilities include designing logos, website layouts, and market materials.',
+      technologies: ['Graphic Design', 'Adobe Creative Suite', 'Logo Design', 'Web Design', 'Marketing Materials'],
+      type: 'Part-time'
     },
     {
       id: 2,
-      title: 'Frontend Developer Trainee',
-      company: 'Digital Innovation Lab',
-      location: 'New York, NY',
-      duration: 'Jan 2023 - May 2023',
-      description: 'Intensive training program focused on modern frontend technologies. Built responsive web applications and learned best practices in UI/UX design.',
-      technologies: ['React', 'TypeScript', 'Tailwind CSS', 'Figma', 'Jest'],
-      type: 'Training'
+      title: 'Front-End Web Developer',
+      company: 'Celebal Technologies Pvt Ltd',
+      location: 'Internship',
+      duration: 'May, 2025 - Present (Less than a month)',
+      description: 'As a ReactJs Intern at Celebal Technologies Pvt Ltd (Internship, 2025-Present), I am responsible for developing and implementing user-friendly web interfaces. I utilize ReactJs to build responsive and interactive web applications.',
+      technologies: ['ReactJs', 'JavaScript', 'HTML', 'CSS', 'Web Development'],
+      type: 'Internship'
     },
     {
       id: 3,
-      title: 'Software Development Intern',
-      company: 'StartupHub Inc.',
-      location: 'Austin, TX',
-      duration: 'Sep 2022 - Dec 2022',
-      description: 'Contributed to the development of a mobile-first web application. Gained experience in agile development methodologies and code review processes.',
-      technologies: ['Vue.js', 'Python', 'PostgreSQL', 'Docker', 'AWS'],
+      title: 'Web Developer',
+      company: 'Internpe',
+      location: 'Internship',
+      duration: 'May, 2024 - Aug, 2024 (2 Months)',
+      description: 'As a Web Developer Intern at Internpe (Internship, 2024), I was responsible for developing and maintaining web applications. I utilized my skills in front-end and back-end development to create user-friendly interfaces and ensure optimal performance.',
+      technologies: ['Web Development', 'Frontend Development', 'Backend Development', 'HTML', 'CSS', 'JavaScript'],
       type: 'Internship'
     }
   ];
@@ -48,10 +48,10 @@ const Experience = () => {
           className="text-center mb-16"
         >
           <h2 className="text-5xl md:text-6xl font-bold mb-6 text-gradient">
-            Internship & Training Experience
+            Work Experience
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Real-world experience gained through internships and specialized training programs 
+            Real-world experience gained through professional roles and internships 
             that shaped my professional development journey.
           </p>
         </motion.div>
