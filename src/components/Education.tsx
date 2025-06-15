@@ -1,4 +1,3 @@
-
 import { motion } from 'framer-motion';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { GraduationCap, Calendar, Award, BookOpen } from 'lucide-react';
@@ -7,13 +6,13 @@ const Education = () => {
   const education = [
     {
       id: 1,
-      degree: 'B Tech (CSE)',
+      degree: 'B Tech (CSE) + Minor in Print Media Design and Production',
       institution: 'Amity University, Rajasthan',
-      location: 'Rajasthan, India',
+      location: 'Jaipur, Rajasthan',
       duration: '2022 - 2026',
       gpa: '7.56 CGPA',
-      description: 'Pursuing Bachelor of Technology in Computer Science and Engineering with focus on software development, algorithms, and modern programming paradigms.',
-      coursework: ['Data Structures & Algorithms', 'Software Engineering', 'Database Management Systems', 'Web Development', 'Computer Networks', 'Object Oriented Programming'],
+      description: 'Pursuing Bachelor of Technology in Computer Science and Engineering with a minor degree in Print Media Design and Production. Focused on software development, algorithms, modern programming paradigms, and media design principles.',
+      coursework: ['Data Structures & Algorithms', 'Software Engineering', 'Database Management Systems', 'Web Development', 'Computer Networks', 'Object Oriented Programming', 'Print Media Design', 'Media Production'],
       achievements: ['Active participation in coding competitions', 'Tech society member', 'Project development and innovation']
     },
     {
