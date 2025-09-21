@@ -1,4 +1,5 @@
-# Welcome to your Lovable project
+# Welcome to My Portfolio 
+<img width="728" height="680" alt="Screenshot 2025-09-21 232307" src="https://github.com/user-attachments/assets/c00a9b7d-f387-4ef2-b125-5281c98daedb" />
 
 ## Project info
 
