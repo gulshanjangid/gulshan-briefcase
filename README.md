@@ -1,5 +1,12 @@
 # Welcome to My Portfolio 
 <img width="728" height="680" alt="Screenshot 2025-09-21 232307" src="https://github.com/user-attachments/assets/c00a9b7d-f387-4ef2-b125-5281c98daedb" />
+<img width="1657" height="790" alt="Screenshot 2025-09-21 232324" src="https://github.com/user-attachments/assets/cd57843a-151e-446f-a58a-2c394bec3ab3" />
+<img width="1599" height="809" alt="Screenshot 2025-09-21 232344" src="https://github.com/user-attachments/assets/9abad0e7-b11a-4bd1-9ff4-0753c9a44e55" />
+<img width="1227" height="810" alt="Screenshot 2025-09-21 232408" src="https://github.com/user-attachments/assets/f41e09f4-4dd3-4539-ba12-6187a42b0b5e" />
+<img width="1357" height="753" alt="Screenshot 2025-09-21 232434" src="https://github.com/user-attachments/assets/cdb817d6-fac8-4ae6-b8b3-ce8fd6880887" />
+<img width="1377" height="782" alt="Screenshot 2025-09-21 232449" src="https://github.com/user-attachments/assets/da60f606-21c0-4144-8981-8b1dbcfe15ae" />
+<img width="1256" height="788" alt="Screenshot 2025-09-21 232501" src="https://github.com/user-attachments/assets/46d51c33-53fa-4b62-ae7b-66cde314f09f" />
+<img width="503" height="616" alt="Screenshot 2025-09-21 232535" src="https://github.com/user-attachments/assets/ef996999-5021-4d22-952e-89142ae13015" />
 
 ## Project info
 
