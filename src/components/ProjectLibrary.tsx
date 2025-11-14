@@ -16,6 +16,16 @@ const ProjectLibrary = () => {
   const projects = [
     {
       id: 1,
+      title: 'RAW Coworking Space',
+      description: 'A comprehensive Flutter mobile application designed to revolutionize the coworking experience. Features seamless workspace management, integrated payment processing, smart booking system, and a powerful admin dashboard for real-time operations monitoring and member management.',
+      category: 'Mobile Apps',
+      status: 'Live',
+      tech: ['Flutter', 'Android', 'iOS', 'Firebase', 'Payment Gateway'],
+      image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?w=500&h=300&fit=crop',
+      gradient: 'from-orange-500 via-red-500 to-red-600'
+    },
+    {
+      id: 2,
       title: 'Nexicon',
       description: 'Modern social media platform with unique content discovery features.',
       category: 'Web Apps',
@@ -25,7 +35,7 @@ const ProjectLibrary = () => {
       gradient: 'from-purple-500 via-pink-500 to-purple-600'
     },
     {
-      id: 2,
+      id: 3,
       title: 'AI Code Analyzer',
       description: 'Tool for analyzing code complexity, suggesting optimizations, and visualizing algorithms.',
       category: 'AI & ML',
@@ -35,7 +45,7 @@ const ProjectLibrary = () => {
       gradient: 'from-cyan-400 via-blue-500 to-blue-600'
     },
     {
-      id: 3,
+      id: 4,
       title: 'AI Website Builder',
       description: 'No-code website builder with AI-powered design and content suggestions.',
       category: 'AI & ML',
@@ -45,7 +55,7 @@ const ProjectLibrary = () => {
       gradient: 'from-blue-500 via-indigo-500 to-purple-600'
     },
     {
-      id: 4,
+      id: 5,
       title: 'AI Image Generator',
       description: 'Advanced AI-powered image generation platform with multiple models and customization options.',
       category: 'AI & ML',
@@ -55,7 +65,7 @@ const ProjectLibrary = () => {
       gradient: 'from-emerald-500 via-teal-500 to-cyan-600'
     },
     {
-      id: 5,
+      id: 6,
       title: 'Flyeng Career',
       description: 'Educational platform for programming, compiler design, and community learning.',
       category: 'Web Apps',
@@ -65,7 +75,7 @@ const ProjectLibrary = () => {
       gradient: 'from-indigo-500 via-purple-500 to-pink-500'
     },
     {
-      id: 6,
+      id: 7,
       title: 'Quiz Website',
       description: 'Interactive platform for creating and taking quizzes with real-time scoring.',
       category: 'Web Apps',
@@ -75,7 +85,7 @@ const ProjectLibrary = () => {
       gradient: 'from-orange-400 via-red-500 to-pink-500'
     },
     {
-      id: 7,
+      id: 8,
       title: 'Hospital Dashboard',
       description: 'Comprehensive healthcare management system with patient tracking.',
       category: 'Web Apps',

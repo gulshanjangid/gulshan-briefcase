@@ -44,7 +44,10 @@ const TechnicalSkills = () => {
         { name: 'Git/GitHub', level: 90, color: 'from-gray-700 to-gray-900' },
         { name: 'VS Code', level: 95, color: 'from-blue-600 to-blue-800' },
         { name: 'Figma', level: 75, color: 'from-purple-500 to-pink-500' },
-        { name: 'Firebase', level: 70, color: 'from-yellow-500 to-orange-600' }
+        { name: 'Firebase', level: 75, color: 'from-yellow-500 to-orange-600' },
+        { name: 'Flutter', level: 80, color: 'from-blue-400 to-cyan-500' },
+        { name: 'Android', level: 75, color: 'from-green-500 to-green-700' },
+        { name: 'iOS', level: 75, color: 'from-gray-400 to-gray-600' }
       ]
     }
   ];
