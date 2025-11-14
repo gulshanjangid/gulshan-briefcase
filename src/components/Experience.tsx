@@ -7,6 +7,16 @@ const Experience = () => {
   const experiences = [
     {
       id: 1,
+      title: 'Digital Product Developer (Android & iOS)',
+      company: 'RAW WorkSpace Solutions PVT LTD',
+      location: 'Internship',
+      duration: 'Jun, 2025 - Jul, 2025 (2 Months)',
+      description: 'As a Digital Product Developer at RAW WorkSpace Solutions PVT LTD, I developed the RAW Coworking Space app - a Flutter project designed to streamline the coworking experience. This app provides a seamless interface for members to manage their workspace, payments, and bookings, while offering a comprehensive dashboard for administrators.',
+      technologies: ['Flutter', 'Android', 'iOS', 'Mobile Development', 'Firebase', 'UI/UX Design'],
+      type: 'Internship'
+    },
+    {
+      id: 2,
       title: 'Graphic Designer',
       company: 'Media Fourth',
       location: 'Part-time',
@@ -16,7 +26,7 @@ const Experience = () => {
       type: 'Part-time'
     },
     {
-      id: 2,
+      id: 3,
       title: 'Front-End Web Developer',
       company: 'Celebal Technologies Pvt Ltd',
       location: 'Internship',
@@ -26,7 +36,7 @@ const Experience = () => {
       type: 'Internship'
     },
     {
-      id: 3,
+      id: 4,
       title: 'Web Developer',
       company: 'Internpe',
       location: 'Internship',
