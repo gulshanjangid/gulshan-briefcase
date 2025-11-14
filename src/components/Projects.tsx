@@ -10,6 +10,16 @@ const Projects = () => {
   const projects = [
     {
       id: 1,
+      title: 'RAW Coworking Space',
+      description: 'A comprehensive Flutter mobile application designed to revolutionize the coworking experience. Features seamless workspace management, integrated payment processing, smart booking system, and a powerful admin dashboard for real-time operations monitoring and member management.',
+      tech: ['Flutter', 'Android', 'iOS', 'Firebase', 'Payment Gateway', 'Real-time Database', 'Push Notifications'],
+      duration: 'Jun 2025 - Jul 2025',
+      image: '/placeholder.svg',
+      link: '#',
+      gradient: 'from-orange-500 to-red-600'
+    },
+    {
+      id: 2,
       title: 'SmartCV AI/ Resume Builder',
       description: 'Developed an AI-powered Resume Builder using the MERN Stack (MongoDB, Express.js, React.js, Node.js). Implemented AI-driven suggestions for content, formatting, and keyword optimization with dynamic resume templates and real-time editing capabilities.',
       tech: ['MongoDB', 'Express.js', 'React.js', 'Node.js', 'AI/ML', 'PDF Export'],
@@ -19,7 +29,7 @@ const Projects = () => {
       gradient: 'from-blue-500 to-purple-600'
     },
     {
-      id: 2,
+      id: 3,
       title: 'AI Chatbot for Customer Support',
       description: 'Developed an intelligent, location-aware customer support chatbot with personalized interactions based on user\'s IP address, local festivals, culture, holidays, weather, and health updates. Features time-sensitive messaging and multi-channel communication options.',
       tech: ['AI/ML', 'Location Services', 'WhatsApp API', 'Node.js', 'Real-time Chat'],
@@ -29,7 +39,7 @@ const Projects = () => {
       gradient: 'from-green-500 to-blue-500'
     },
     {
-      id: 3,
+      id: 4,
       title: 'Education website - FlyengCareer.com',
       description: 'FlyengCareer is an online educational platform dedicated to delivering structured, high-quality content for undergraduate studies and competitive exam preparation. Offers meticulously curated resources and expert guidance.',
       tech: ['Web Development', 'Educational Platform', 'Content Management', 'Responsive Design'],
